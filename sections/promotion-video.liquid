@@ -1,0 +1,239 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings['padding_top-mob'] | default: section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings['padding_bottom-mob'] | default: section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+{{ 'slick.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'jquery.min.js' | asset_url }}"></script>
+<script defer src="{{ 'slick.min.js' | asset_url }}"></script>
+<div class="section-{{ section.id }}-padding" data-section="{{ section.id }}">
+  <div class="page-width">
+      <h2 class="mb-[25px] heading text-{{ section.settings.alignment }}" style="font-size: {{ section.settings.font_size }}px;">{{ section.settings.text | default:'WATCH AND BUY' }}</h2>
+    <div class="promotion-section">
+      {% for block in section.blocks %}
+        {% liquid
+          assign media = block.settings.video
+          assign product = block.settings.product
+          assign discount_percent = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round
+        %}
+
+        <article class="rounded-2xl m-2 soft-shadow ring-1 ring-black/5 overflow-hidden bg-white">
+          <div class="relative bg-neutral-50">
+            <div class="h-[500px] w-full aspect-[3/5] sm:aspect-[7/12] md:aspect-[9/16] overflow-hidden">
+              {{
+                media
+                | video_tag:
+                  autoplay: true,
+                  loop: true,
+                  muted: true,
+                  controls: false,
+                  width: 640,
+                  height: 260,
+                  class: 'h-full w-full object-cover'
+              }}
+            </div>
+          </div>
+
+          <div class="flex gap-3 p-4 items-center">
+            {{
+              product.featured_media
+              | image_url: width: product.featured_media.width
+              | image_tag: width: null, class: 'h-12 w-[80px] h-[80px] sm:h-25 sm:w-25 rounded-md object-cover ring-1 ring-black/5'
+            }}
+            <div class="min-w-0 flex flex-col gap-[3px]">
+              <h3 class="xl:text-[14px] lg:text-[10px] md:text-[10px] sm:text-[8px] font-semibold leading-tight">{{ product.title }}</h3>
+              <div class="mt-1 flex items-center gap-2">
+                <div class="xl:text-[14px] lg:text-[12px] md:text-[10px] sm:text-[10px] font-bold">{{ product.price | money_without_trailing_zeros }}</div>
+                <div class="xl:text-[14px] lg:text-[12px] md:text-[10-px] sm:text-[10px] text-neutral-400 line-through">
+                  {{ product.compare_at_price | money_without_trailing_zeros }}
+                </div>
+              </div>
+              <div class="flex items-center gap-[10px]"> 
+                {% if product.compare_at_price > product.price %}
+                <span class="ml-1 inline-flex items-center rounded-md bg-black h-fit p-[8px] text-[11px] font-semibold text-white">
+                  {{- discount_percent }}% off</span
+                >
+                  {% endif %}
+
+              <div class="!w-max xl:w-[130px] sm:w-[100px] m-0">
+                {% render 'custom-atc', card_product: product, section_id: section.id ,  quick_add: section.settings.quick_add, class: 'promotion-atc min-h-[0px] min-w-[0px] w-max', m-0: '!m-0', p: ' !px-[15px] !py-[8px]'%}
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Promotion Videos",
+  "class": "promotion-videos",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Heading"
+    },
+    {
+   "type": "text_alignment",
+   "id": "alignment",
+   "label": "Text alignment",
+   "default": "center"
+},
+{
+  "type": "range",
+  "id": "font_size",
+  "min": 12,
+  "max": 36,
+  "step": 1,
+  "unit": "px",
+  "label": "Font size",
+  "default": 16
+},
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Desktop Padding Top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Desktop Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top-mob",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile Padding Top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom-mob",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile Padding Bottom",
+      "default": 50
+    },
+    {
+      "type": "select",
+      "id": "quick_add",
+      "default": "none",
+      "label": "t:sections.main-collection-product-grid.settings.quick_add.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_1"
+        },
+        {
+          "value": "standard",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_2"
+        },
+        {
+          "value": "bulk",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotion Videos"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .promotion-section .slick-list { margin: 0 -8px; }
+</style>
+
+<script>
+  $(function () {
+    const $promo = $('.promotion-section');
+    if (!$promo.hasClass('slick-initialized')) {
+      $promo.slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        autoplay:false, 
+        autoplaySpeed: 3000,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 1024, 
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 700, 
+            settings: {
+              slidesToShow: 1,  
+              slidesToScroll: 1,
+              centerMode: true,  
+              centerPadding: '15%'
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              centerMode: true,
+              centerPadding: '10%'
+            }
+          }
+        ]
+      });
+    }
+  });
+</script>
