@@ -366,6 +366,8 @@
                     {% if card_product.selected_or_first_available_variant.available == false %}
                       disabled
                     {% endif %}
+                  style="background: {{ settings.body_text }}; color: {{ settings.button-text }}"
+
                   >
                     <span>
                       {%- if card_product.selected_or_first_available_variant.available -%}

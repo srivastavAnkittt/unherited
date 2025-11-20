@@ -249,6 +249,18 @@
         "default": 1
       },
       {
+        "type": "color",
+        "id": "body_text",
+        "label": "Button Background",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "button-text",
+        "label": "Button text",
+        "default": "white"
+      },
+      {
         "type": "range",
         "id": "buttons_border_opacity",
         "min": 0,
