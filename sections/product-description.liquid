@@ -1,0 +1,35 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings['padding_top-mob'] | default: section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings['padding_bottom-mob'] | default: section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding" data-section="{{ section.id }}">
+    <div class="page-width">
+        {% render 'product-description' %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Description",
+  "class": "product-description",
+  "tag": "section",
+  "settings": [
+    
+  ],
+  "presets": [
+    {
+      "name": "Product Description"
+    }
+  ]
+}
+{% endschema %}

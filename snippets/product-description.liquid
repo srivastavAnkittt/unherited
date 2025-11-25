@@ -1,0 +1,98 @@
+{% assign note = "FRAGRANCE NOTES" %}
+{% assign feelings = "FEELINGS" %}
+{% assign occasions = "OCCASIONS" %}
+{% assign behind_perfume = "BEHIND THE PERFUME" %}
+{% assign shipping = "SHIPPING & RETURN" %}
+{% assign legal = "LEGAL INFORMATION" %}
+
+<div class="perfume-accordion mt-5">
+  <div class="acc-item">
+    <div class="acc-heading bg-gray-200 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc1">
+      {{ note }}
+    </div>
+    <div id="acc1" class="acc-content block py-3 px-4 border-b border-gray-200">
+      {{ product.metafields.custom.fragrance_notes | metafield_tag }}
+    </div>
+  </div>
+  <div class="acc-item">
+    <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc2">
+      {{ feelings }}
+    </div>
+    <div id="acc2" class="acc-content hidden py-3 px-4 border-b border-gray-200">
+      {{ product.metafields.custom.feelings | metafield_tag }}
+    </div>
+  </div>
+  <div class="acc-item">
+    <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc3">
+      {{ occasions }}
+    </div>
+    <div id="acc3" class="acc-content hidden py-3 px-4 border-b border-gray-200">
+      {{ product.metafields.custom.occasions | metafield_tag }}
+    </div>
+  </div>
+  <div class="acc-item">
+    <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc4">
+      {{ behind_perfume }}
+    </div>
+    <div id="acc4" class="acc-content hidden py-3 px-4 border-b border-gray-200">
+      {{ product.metafields.custom.behind_the_perfume | metafield_tag }}
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc5">
+      {{ shipping }}
+    </div>
+    <div id="acc5" class="acc-content hidden py-3 px-4 border-b border-gray-200">
+      {{ product.metafields.custom.shipping_return | metafield_tag }}
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc6">
+      {{ legal }}
+    </div>
+    <div id="acc6" class="acc-content hidden py-3 px-4 border-b border-gray-200">
+      {{ product.metafields.custom.legal_information | metafield_tag }}
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const headings = document.querySelectorAll(".acc-heading");
+  const contents = document.querySelectorAll(".acc-content");
+
+  headings.forEach((heading) => {
+    heading.addEventListener("click", () => {
+      const target = heading.dataset.target;
+      const content = document.getElementById(target);
+
+      if (heading.classList.contains("bg-gray-200")) {
+        heading.classList.remove("bg-gray-200");
+        heading.classList.add("bg-gray-100");
+
+        content.classList.add("hidden");
+        content.classList.remove("block");
+        return;
+      }
+
+      headings.forEach(h => {
+        h.classList.remove("bg-gray-200");
+        h.classList.add("bg-gray-100");
+      });
+
+      contents.forEach(c => {
+        c.classList.add("hidden");
+        c.classList.remove("block");
+      });
+
+      heading.classList.remove("bg-gray-100");
+      heading.classList.add("bg-gray-200");
+
+      content.classList.remove("hidden");
+      content.classList.add("block");
+    });
+  });
+});
+</script>
