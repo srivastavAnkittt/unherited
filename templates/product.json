@@ -103,12 +103,19 @@
         "show_vendor": false,
         "show_rating": false,
         "padding_top": 36,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "quick_add": "none"
       }
+    },
+    "product_description_cY6hVz": {
+      "type": "product-description",
+      "name": "Product Description",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "product_description_cY6hVz"
   ]
 }
