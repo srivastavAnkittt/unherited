@@ -105,6 +105,8 @@
                     </h2>
                   </a>
                 </div>
+              {%- when 'information' -%}
+                {% render 'product-description', product: product %}
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -782,6 +784,11 @@
     {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
+      "limit": 1
+    },
+    {
+      "type": "information",
+      "name": "Meta Description",
       "limit": 1
     },
     {
