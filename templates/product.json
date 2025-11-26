@@ -55,6 +55,10 @@
           "type": "description",
           "settings": {}
         },
+        "information_DgyQqB": {
+          "type": "information",
+          "settings": {}
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -70,6 +74,7 @@
         "complementary_GWYNQ4",
         "buy_buttons",
         "description",
+        "information_DgyQqB",
         "share"
       ],
       "settings": {
@@ -106,16 +111,10 @@
         "padding_bottom": 28,
         "quick_add": "none"
       }
-    },
-    "product_description_cY6hVz": {
-      "type": "product-description",
-      "name": "Product Description",
-      "settings": {}
     }
   },
   "order": [
     "main",
-    "related-products",
-    "product_description_cY6hVz"
+    "related-products"
   ]
 }
