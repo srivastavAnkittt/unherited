@@ -6,6 +6,7 @@
 {% assign legal = "LEGAL INFORMATION" %}
 
 <div class="perfume-accordion mt-5">
+  {% if product.metafields.custom.fragrance_notes != blank %}
   <div class="acc-item">
     <div class="acc-heading bg-gray-200 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc1">
       {{ note }}
@@ -14,6 +15,9 @@
       {{ product.metafields.custom.fragrance_notes | metafield_tag }}
     </div>
   </div>
+  {% endif %}
+
+  {% if product.metafields.custom.feelings != blank %}
   <div class="acc-item">
     <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc2">
       {{ feelings }}
@@ -22,6 +26,9 @@
       {{ product.metafields.custom.feelings | metafield_tag }}
     </div>
   </div>
+  {% endif %}
+
+  {% if product.metafields.custom.occasions != blank %}
   <div class="acc-item">
     <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc3">
       {{ occasions }}
@@ -30,6 +37,9 @@
       {{ product.metafields.custom.occasions | metafield_tag }}
     </div>
   </div>
+  {% endif %}
+
+  {% if product.metafields.custom.behind_the_perfume != blank %}
   <div class="acc-item">
     <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc4">
       {{ behind_perfume }}
@@ -38,7 +48,9 @@
       {{ product.metafields.custom.behind_the_perfume | metafield_tag }}
     </div>
   </div>
+{% endif %}
 
+{% if product.metafields.custom.shipping_return != blank %}
   <div class="acc-item">
     <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc5">
       {{ shipping }}
@@ -47,7 +59,9 @@
       {{ product.metafields.custom.shipping_return | metafield_tag }}
     </div>
   </div>
+  {% endif %}
 
+  {% if product.metafields.custom.legal_information != blank %}
   <div class="acc-item">
     <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc6">
       {{ legal }}
@@ -56,6 +70,7 @@
       {{ product.metafields.custom.legal_information | metafield_tag }}
     </div>
   </div>
+  {% endif %}
 </div>
 
 <script>

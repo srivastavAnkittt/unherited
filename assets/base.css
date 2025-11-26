@@ -195,6 +195,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   display: none;
 }
 
+modal-opener .loading__spinner{
+  display: none !important;
+}
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
