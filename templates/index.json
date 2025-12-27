@@ -65,72 +65,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "promotion_video_nc7xYq": {
-      "type": "promotion-video",
-      "blocks": {
-        "image_wgcMg8": {
-          "type": "Image",
-          "settings": {
-            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
-            "product": "duet-of-delight"
-          }
-        },
-        "image_YLKWPF": {
-          "type": "Image",
-          "settings": {
-            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.03.10 (1).mp4",
-            "product": "little-beach-100ml"
-          }
-        },
-        "image_hzMphg": {
-          "type": "Image",
-          "settings": {
-            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
-            "product": "maya-citrus-perfume-30ml"
-          }
-        },
-        "image_RLnN4r": {
-          "type": "Image",
-          "settings": {
-            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.06.05 (1).mp4",
-            "product": "miami-30ml"
-          }
-        },
-        "image_rcdXfN": {
-          "type": "Image",
-          "settings": {
-            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.03.10 (1).mp4",
-            "product": "moh-oudh-perfume-30ml"
-          }
-        },
-        "image_4LAyiw": {
-          "type": "Image",
-          "settings": {
-            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.04.34 (1).mp4",
-            "product": "toxic-fruit-100ml"
-          }
-        }
-      },
-      "block_order": [
-        "image_wgcMg8",
-        "image_YLKWPF",
-        "image_hzMphg",
-        "image_RLnN4r",
-        "image_rcdXfN",
-        "image_4LAyiw"
-      ],
-      "name": "Promotion Videos",
-      "settings": {
-        "text": "",
-        "alignment": "left",
-        "font_size": 25,
-        "padding_top": 10,
-        "padding_bottom": 10,
-        "padding_top-mob": 10,
-        "padding_bottom-mob": 10,
-        "quick_add": "standard"
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -288,6 +222,72 @@
         "padding_bottom": 0,
         "padding_top-mob": 20,
         "padding_bottom-mob": 50
+      }
+    },
+    "promotion_video_nc7xYq": {
+      "type": "promotion-video",
+      "blocks": {
+        "image_wgcMg8": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
+            "product": "duet-of-delight"
+          }
+        },
+        "image_YLKWPF": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.03.10 (1).mp4",
+            "product": "little-beach-100ml"
+          }
+        },
+        "image_hzMphg": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
+            "product": "maya-citrus-perfume-30ml"
+          }
+        },
+        "image_RLnN4r": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.06.05 (1).mp4",
+            "product": "miami-30ml"
+          }
+        },
+        "image_rcdXfN": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.03.10 (1).mp4",
+            "product": "moh-oudh-perfume-30ml"
+          }
+        },
+        "image_4LAyiw": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.04.34 (1).mp4",
+            "product": "toxic-fruit-100ml"
+          }
+        }
+      },
+      "block_order": [
+        "image_wgcMg8",
+        "image_YLKWPF",
+        "image_hzMphg",
+        "image_RLnN4r",
+        "image_rcdXfN",
+        "image_4LAyiw"
+      ],
+      "name": "Promotion Videos",
+      "settings": {
+        "text": "",
+        "alignment": "left",
+        "font_size": 25,
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_top-mob": 10,
+        "padding_bottom-mob": 10,
+        "quick_add": "standard"
       }
     },
     "featured_collection_L3i7ix": {
@@ -452,10 +452,10 @@
   },
   "order": [
     "slideshow_tC3JCT",
-    "promotion_video_nc7xYq",
     "featured_collection",
     "featured_collection_EXhTBp",
     "slider_GNgyW6",
+    "promotion_video_nc7xYq",
     "featured_collection_L3i7ix",
     "featured_collection_heprrF",
     "slider_Wn6yEX"
