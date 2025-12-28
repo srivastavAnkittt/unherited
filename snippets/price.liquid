@@ -38,6 +38,9 @@
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
+
+          assign discount_percent = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round
+
 -%}
 
 {%- unless target == null and placeholder == null -%}
@@ -91,6 +94,10 @@
         {%- endif -%}
       </div>
       <div class="price__sale">
+         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+        <span class="price-item price-item--sale price-item--last">
+          {{ money_price }}
+        </span>
         {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span>
@@ -103,11 +110,13 @@
             </s>
           </span>
         {%- endunless -%}
-        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-        <span class="price-item price-item--sale price-item--last">
-          {{ money_price }}
-        </span>
+       
       </div>
+      {% if product.compare_at_price > product.price %}
+                <span class="ml-1 inline-flex items-center rounded-md bg-black h-fit p-[8px] text-[11px] font-semibold text-white">
+                  {{- discount_percent }}% off</span
+                >
+                  {% endif %}
       {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
         {% render 'unit-price', price: product.selected_or_first_available_variant.unit_price, measurement: product.selected_or_first_available_variant.unit_price_measurement %}
       {%- endif -%}

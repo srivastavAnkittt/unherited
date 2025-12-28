@@ -125,6 +125,15 @@
         "default": 100
       },
       {
+        "type": "range",
+        "id": "heading_font_weight",
+        "label": "Heading font weight",
+        "min": 300,
+        "max": 900,
+        "step": 100,
+        "default": 700
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__2.content"
       },
@@ -143,7 +152,16 @@
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
-      }
+      },
+      {
+        "type": "range",
+        "id": "body_font_weight",
+        "label": "Body font weight",
+        "min": 300,
+        "max": 900,
+        "step": 100,
+        "default": 400
+      },
     ]
   },
   {
@@ -1230,6 +1248,22 @@
   {
     "name": "t:settings_schema.badges.name",
     "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_badge",
+        "label": "Overlay Background Color",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "overlay-bg",
+        "label": "Overlay text color"
+      },
+      {
+        "type": "color",
+        "id": "overlay-color",
+        "label": "Text Color"
+      },
       {
         "type": "select",
         "id": "badge_position",

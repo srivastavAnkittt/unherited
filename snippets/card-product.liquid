@@ -125,6 +125,7 @@
             </h3>
           </div>
           <div class="card__badge {{ settings.badge_position }}">
+            {% if settings.show_badge %}
             {%- if card_product.available == false -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -140,6 +141,15 @@
                 {{- 'products.product.on_sale' | t -}}
               </span>
             {%- endif -%}
+          {% endif %}
+          <span class="{{ settings.badge_position }}">
+            {% for t in card_product.tags %}
+              {% if t contains 'overlay#' %}
+                <span class="card__badge badge badge--bottom-left" style="background:{{ settings.overlay-bg }}; color: {{ settings.overlay-color }}">{{ t | split: '#' | last }}</span>
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          </span>
           </div>
         </div>
       </div>
@@ -366,10 +376,8 @@
                     {% if card_product.selected_or_first_available_variant.available == false %}
                       disabled
                     {% endif %}
-                  style="background: {{ settings.body_text }}; color: {{ settings.button-text }}"
-
+                    style="background: {{ settings.body_text }}; color: {{ settings.button-text }}"
                   >
-                    
                     <span>
                       {%- if card_product.selected_or_first_available_variant.available -%}
                         {{ 'products.product.add_to_cart' | t }}
