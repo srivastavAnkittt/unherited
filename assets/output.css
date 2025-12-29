@@ -1333,9 +1333,6 @@
   .text-\[12px\] {
     font-size: 12px;
   }
-  .text-\[14px\] {
-    font-size: 14px;
-  }
   .leading-tight {
     --tw-leading: var(--leading-tight);
     line-height: var(--leading-tight);
@@ -1864,29 +1861,9 @@
       font-size: 8px;
     }
   }
-  .sm\:text-\[9px\] {
-    @media (width >= 40rem) {
-      font-size: 9px;
-    }
-  }
-  .sm\:text-\[10px\] {
-    @media (width >= 40rem) {
-      font-size: 10px;
-    }
-  }
-  .sm\:text-\[12px\] {
-    @media (width >= 40rem) {
-      font-size: 12px;
-    }
-  }
   .sm\:text-\[14px\] {
     @media (width >= 40rem) {
       font-size: 14px;
-    }
-  }
-  .sm\:text-\[16px\] {
-    @media (width >= 40rem) {
-      font-size: 16px;
     }
   }
   .sm\:text-\[18px\] {
@@ -1940,21 +1917,6 @@
       font-size: 10px;
     }
   }
-  .md\:text-\[12px\] {
-    @media (width >= 48rem) {
-      font-size: 12px;
-    }
-  }
-  .md\:text-\[10-px\] {
-    @media (width >= 48rem) {
-      color: 10-px;
-    }
-  }
-  .md\:text-\[10\] {
-    @media (width >= 48rem) {
-      color: 10;
-    }
-  }
   .lg\:mt-\[25px\] {
     @media (width >= 64rem) {
       margin-top: 25px;
@@ -1978,11 +1940,6 @@
   .lg\:text-\[10px\] {
     @media (width >= 64rem) {
       font-size: 10px;
-    }
-  }
-  .lg\:text-\[12px\] {
-    @media (width >= 64rem) {
-      font-size: 12px;
     }
   }
   .xl\:w-\[130px\] {
