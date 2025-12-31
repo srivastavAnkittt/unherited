@@ -108,7 +108,7 @@
     display: list-item;
   }
   ol, ul, menu {
-    list-style: none;
+    list-style: auto;
   }
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
