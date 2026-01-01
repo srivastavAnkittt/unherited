@@ -1,0 +1,464 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_tC3JCT": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_Cn97U6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner_Web_1.webp",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_aW9P8n": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_Cn97U6",
+        "slide_aW9P8n"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "NEW LAUNCHES",
+        "heading_size": "h2",
+        "description": "",
+        "font_size": "left",
+        "button-text": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_EXhTBp": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "new-launches",
+        "products_to_show": 8,
+        "title": "BEST SELLER",
+        "heading_size": "h2",
+        "description": "",
+        "font_size": "left",
+        "button-text": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "slider_GNgyW6": {
+      "type": "slider",
+      "blocks": {
+        "image_wnnqTD": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Bwdisrupt.png"
+          }
+        },
+        "image_3jaXzm": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/hindustan_times.png"
+          }
+        },
+        "image_biwxBE": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Et_retail.png"
+          }
+        },
+        "image_affFqq": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/entracker_f8184851-47bf-4079-ad8e-21d7398430f8.png"
+          }
+        },
+        "image_hgV3Rr": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/myntra-1.png"
+          }
+        },
+        "image_yYEQmn": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Bwdisrupt.png"
+          }
+        },
+        "image_jHAkQK": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/idiva.png"
+          }
+        },
+        "image_wjbK4F": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/broadway_logo.png"
+          }
+        },
+        "image_68Vti3": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Grazia_153c46cc-6044-4c89-bf28-86afbaf885c9.png"
+          }
+        },
+        "image_bjT7Ym": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/india_retailing.png"
+          }
+        },
+        "image_WWxKEm": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Nykaa_New_Logo_svg.png"
+          }
+        },
+        "image_wKKP9K": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/amazon_c4f3f390-161c-4cae-b71d-9c1267b7c2d0.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_wnnqTD",
+        "image_3jaXzm",
+        "image_biwxBE",
+        "image_affFqq",
+        "image_hgV3Rr",
+        "image_yYEQmn",
+        "image_jHAkQK",
+        "image_wjbK4F",
+        "image_68Vti3",
+        "image_bjT7Ym",
+        "image_WWxKEm",
+        "image_wKKP9K"
+      ],
+      "name": "Slider Image",
+      "settings": {
+        "heading": "",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_top-mob": 20,
+        "padding_bottom-mob": 50
+      }
+    },
+    "promotion_video_nc7xYq": {
+      "type": "promotion-video",
+      "blocks": {
+        "image_wgcMg8": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
+            "product": "duet-of-delight"
+          }
+        },
+        "image_YLKWPF": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.03.10 (1).mp4",
+            "product": "little-beach-100ml"
+          }
+        },
+        "image_hzMphg": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
+            "product": "maya-citrus-perfume-30ml"
+          }
+        },
+        "image_RLnN4r": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.06.05 (1).mp4",
+            "product": "miami-30ml"
+          }
+        },
+        "image_rcdXfN": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.03.10 (1).mp4",
+            "product": "moh-oudh-perfume-30ml"
+          }
+        },
+        "image_4LAyiw": {
+          "type": "Image",
+          "settings": {
+            "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.04.34 (1).mp4",
+            "product": "toxic-fruit-100ml"
+          }
+        }
+      },
+      "block_order": [
+        "image_wgcMg8",
+        "image_YLKWPF",
+        "image_hzMphg",
+        "image_RLnN4r",
+        "image_rcdXfN",
+        "image_4LAyiw"
+      ],
+      "name": "Promotion Videos",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "alignment": "left",
+        "font_size": 25,
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_top-mob": 10,
+        "padding_bottom-mob": 10,
+        "quick_add": "standard"
+      }
+    },
+    "featured_collection_L3i7ix": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "new-launches",
+        "products_to_show": 8,
+        "title": "HIM",
+        "heading_size": "h2",
+        "description": "<p>Discover your signature fragrance from our exclusive collection for Men</p>",
+        "font_size": "center",
+        "button-text": "Discover",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_heprrF": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "new-launches",
+        "products_to_show": 8,
+        "title": "HER",
+        "heading_size": "h2",
+        "description": "<p>Discover your signature fragrance from our exclusive collection for Men</p>",
+        "font_size": "center",
+        "button-text": "Discover",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "slider_Wn6yEX": {
+      "type": "slider",
+      "blocks": {
+        "image_Hq7WT8": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Bwdisrupt.png"
+          }
+        },
+        "image_qzf9pk": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/hindustan_times.png"
+          }
+        },
+        "image_BKRg7E": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Et_retail.png"
+          }
+        },
+        "image_echDeF": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/entracker_f8184851-47bf-4079-ad8e-21d7398430f8.png"
+          }
+        },
+        "image_LrNdx4": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/myntra-1.png"
+          }
+        },
+        "image_mJx4Mg": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Bwdisrupt.png"
+          }
+        },
+        "image_ixQcwC": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/idiva.png"
+          }
+        },
+        "image_a3mXmc": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/broadway_logo.png"
+          }
+        },
+        "image_WxgxdD": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Grazia_153c46cc-6044-4c89-bf28-86afbaf885c9.png"
+          }
+        },
+        "image_hYKFtH": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/india_retailing.png"
+          }
+        },
+        "image_G3WfGE": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Nykaa_New_Logo_svg.png"
+          }
+        },
+        "image_3WLDdx": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/amazon_c4f3f390-161c-4cae-b71d-9c1267b7c2d0.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_Hq7WT8",
+        "image_qzf9pk",
+        "image_BKRg7E",
+        "image_echDeF",
+        "image_LrNdx4",
+        "image_mJx4Mg",
+        "image_ixQcwC",
+        "image_a3mXmc",
+        "image_WxgxdD",
+        "image_hYKFtH",
+        "image_G3WfGE",
+        "image_3WLDdx"
+      ],
+      "name": "Slider Image",
+      "settings": {
+        "heading": "",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_top-mob": 10,
+        "padding_bottom-mob": 10
+      }
+    }
+  },
+  "order": [
+    "slideshow_tC3JCT",
+    "featured_collection",
+    "featured_collection_EXhTBp",
+    "slider_GNgyW6",
+    "promotion_video_nc7xYq",
+    "featured_collection_L3i7ix",
+    "featured_collection_heprrF",
+    "slider_Wn6yEX"
+  ]
+}
