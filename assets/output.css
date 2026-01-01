@@ -338,6 +338,9 @@
     -webkit-box-orient: horizontal;
     -webkit-line-clamp: unset;
   }
+  .\!hidden {
+    display: none !important;
+  }
   .block {
     display: block;
   }
@@ -1939,6 +1942,11 @@
   .lg\:mt-\[25px\] {
     @media (width >= 64rem) {
       margin-top: 25px;
+    }
+  }
+  .lg\:block\! {
+    @media (width >= 64rem) {
+      display: block !important;
     }
   }
   .lg\:h-14 {
