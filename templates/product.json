@@ -116,7 +116,7 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28,
-        "quick_add": "none"
+        "quick_add": "standard"
       }
     }
   },

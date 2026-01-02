@@ -77,7 +77,7 @@
         "button-text": "",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": true,
@@ -98,7 +98,7 @@
     "featured_collection_EXhTBp": {
       "type": "featured-collection",
       "settings": {
-        "collection": "new-launches",
+        "collection": "shop-all",
         "products_to_show": 8,
         "title": "BEST SELLER",
         "heading_size": "h2",
@@ -107,7 +107,7 @@
         "button-text": "",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": false,
@@ -231,28 +231,28 @@
           "type": "Image",
           "settings": {
             "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
-            "product": "duet-of-delight"
+            "product": "for-men-aquatic-citrus-30-extrait-de-parfum"
           }
         },
         "image_YLKWPF": {
           "type": "Image",
           "settings": {
             "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.03.10 (1).mp4",
-            "product": "little-beach-100ml"
+            "product": "for-men-leathery-spicy-30-extrait-de-parfum"
           }
         },
         "image_hzMphg": {
           "type": "Image",
           "settings": {
             "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
-            "product": "maya-citrus-perfume-30ml"
+            "product": "for-women-fresh-floral-30-extrait-de-parfum"
           }
         },
         "image_RLnN4r": {
           "type": "Image",
           "settings": {
             "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.06.05 (1).mp4",
-            "product": "miami-30ml"
+            "product": "for-women-fruity-gourmand-22-extrait-de-parfum"
           }
         },
         "image_rcdXfN": {
@@ -266,7 +266,7 @@
           "type": "Image",
           "settings": {
             "video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.04.34 (1).mp4",
-            "product": "toxic-fruit-100ml"
+            "product": "for-men-aquatic-citrus-30-extrait-de-parfum"
           }
         }
       },
@@ -294,8 +294,8 @@
     "featured_collection_L3i7ix": {
       "type": "featured-collection",
       "settings": {
-        "collection": "new-launches",
-        "products_to_show": 8,
+        "collection": "men",
+        "products_to_show": 2,
         "title": "HIM",
         "heading_size": "h2",
         "description": "<p>Discover your signature fragrance from our exclusive collection for Men</p>",
@@ -303,7 +303,7 @@
         "button-text": "Discover",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": false,
@@ -324,7 +324,7 @@
     "featured_collection_heprrF": {
       "type": "featured-collection",
       "settings": {
-        "collection": "new-launches",
+        "collection": "women",
         "products_to_show": 8,
         "title": "HER",
         "heading_size": "h2",
@@ -333,7 +333,7 @@
         "button-text": "Discover",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": false,

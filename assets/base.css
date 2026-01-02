@@ -3513,7 +3513,7 @@ details-disclosure > details {
 
 .loading__spinner {
   width: 1.8rem;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .spinner {
