@@ -3601,3 +3601,13 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+ul {
+  list-style: disc;
+  padding-left: 2.25rem;
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 2.25rem;
+}

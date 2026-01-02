@@ -54,7 +54,7 @@
         "offers_pWbCwC": {
           "type": "offers",
           "settings": {
-            "offer_text": "<p><strong>LIMITED TIME OFFERS</strong><br/><br/>Flat 35% OFF on Orders above £35<br/>Flat 50% OFF on Orders above £50</p>"
+            "offer_text": "<p><strong>LIMITED TIME OFFERS</strong><br/></p><ul><li>Flat 35% OFF on Orders above £35</li><li>Flat 50% OFF on Orders above £50</li></ul>"
           }
         },
         "description": {
