@@ -3172,9 +3172,9 @@ details-disclosure > details {
   padding-left: 2rem;
 }
 
-.rte li {
+/* .rte li {
   list-style: auto;
-}
+} */
 
 .rte li:last-child {
   margin-bottom: 0;
