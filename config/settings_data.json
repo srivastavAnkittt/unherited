@@ -12,9 +12,11 @@
     "logo": "shopify://shop_images/WhatsApp_Image_2025-11-19_at_13.58.01.jpg",
     "logo_width": 90,
     "type_header_font": "poppins_n4",
-    "heading_scale": 100,
-    "type_body_font": "inter_n4",
-    "body_scale": 100,
+    "heading_scale": 120,
+    "heading_font_weight": 500,
+    "type_body_font": "poppins_n4",
+    "body_scale": 115,
+    "body_font_weight": 500,
     "page_width": 1500,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
@@ -110,14 +112,14 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "Contact Us",
-    "brand_description": "<p>984/2, Delhi, Central Delhi, 110006</p><p>8173352416</p><p>Help@unherited.com</p><p>Mon-Fri: 9am-5pm</p>",
+    "brand_description": "<p>10D,Affinia,Unimark Riviera,GTRoad,Uttarpara, Hooghly,</p><p>West Bengal-712232.<br/>8100250975</p><p><a href=\"mailto:Vishwajeet@unherited.com\" title=\"mailto:Vishwajeet@unherited.com\">Vishwajeet@unherited.com</a></p><p>Mon-Fri: 10am-6pm</p>",
     "brand_image": "shopify://shop_images/WhatsApp_Image_2025-11-19_at_13.58.01.jpg",
     "brand_image_width": 100,
-    "social_facebook_link": "#",
-    "social_instagram_link": "#",
-    "social_youtube_link": "#",
-    "social_tiktok_link": "",
-    "social_twitter_link": "#",
+    "social_facebook_link": "",
+    "social_instagram_link": "https://www.instagram.com/unherited_official?igsh=MTc3NzAxcWZpdHNsbw==",
+    "social_youtube_link": "",
+    "social_tiktok_link": "https://www.instagram.com/unherited_official?igsh=MTc3NzAxcWZpdHNsbw==",
+    "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
     "social_tumblr_link": "",
@@ -146,6 +148,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
