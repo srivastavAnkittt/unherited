@@ -11,45 +11,11 @@
   "sections": {
     "image_banner_eADnra": {
       "type": "image-banner",
-      "blocks": {
-        "heading_KUxfdL": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_z4p8DJ": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
-        "buttons_xnAhet": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_KUxfdL",
-        "text_z4p8DJ",
-        "buttons_xnAhet"
-      ],
-      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "{{ collection.image }}",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "adapt",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
@@ -62,6 +28,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": true,

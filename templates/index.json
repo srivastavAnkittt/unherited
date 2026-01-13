@@ -15,8 +15,8 @@
         "slide_rkWacK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Desksop_Banner_3.jpg",
-            "mobile": "shopify://shop_images/Mobile_Banner_3.jpg",
+            "image": "shopify://shop_images/Banner_3_Deskstop_-_her.jpg",
+            "mobile": "shopify://shop_images/Banner_3_Mobile_-_her.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -34,8 +34,8 @@
         "slide_rawRe6": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Desktop_Banner_2.jpg",
-            "mobile": "shopify://shop_images/Mobile_Banner_2.jpg",
+            "image": "shopify://shop_images/Banner_2_Deskstop_-_him.jpg",
+            "mobile": "shopify://shop_images/Banner_2_mobile_-_him.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -53,8 +53,8 @@
         "slide_3Dfg73": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Deskstop_Banner_1.jpg",
-            "mobile": "shopify://shop_images/Mobile_Banner_1.jpg",
+            "image": "shopify://shop_images/Banner_1_Deskstop_-_All.jpg",
+            "mobile": "shopify://shop_images/Banner_1_Mobile_-_All.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -81,7 +81,7 @@
         "slide_height": "adapt_image",
         "slider_visual": "none",
         "auto_rotate": true,
-        "change_slides_speed": 5,
+        "change_slides_speed": 3,
         "image_behavior": "none",
         "show_text_below-content": false,
         "show_text_below": true,
@@ -90,6 +90,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "all",
         "products_to_show": 8,

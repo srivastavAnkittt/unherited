@@ -1,0 +1,158 @@
+<div class="partner-logo-slider"  style="background:{{ section.settings.bg }}">
+  <div class="partner-logo-slide">
+    {% for block in section.blocks %}
+        {% if block.settings.richtext != "" %}
+        <span style="color:{{ section.settings.color }}">{{ block.settings.richtext | link_to: block.settings.link }}</span>
+        {% endif %}
+    {% endfor %}
+  </div>
+</div>
+<style>
+    .partner-logo-slider {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+}
+.partner-logo-slide span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.partner-logo-slider:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 9;
+}
+.partner-logo-slider:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 9;
+}
+.partner-logo-slide {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: partner-logo 15s linear infinite;
+    padding: 13px 0;
+}
+.partner-logo-slide:hover {
+  animation-play-state: paused;
+}
+.partner-logo-slide img {
+  width: 150px;
+  border: 1px solid #b2b2b2;
+  padding: 20px;
+  border-radius: 10px;
+}
+@keyframes partner-logo {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .partner-logo-slide {
+    gap: 20px;
+  }
+  .partner-logo-slide img {
+    height: 45px;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .partner-logo-slide {
+  animation: partner-logo 3s linear infinite;
+}
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelector(".partner-logo-slide");
+  const cloneCount = 3;
+
+  if (!slides) return;
+
+  for (let i = 0; i < cloneCount; i++) {
+    const children = Array.from(slides.children);
+
+    children.forEach(child => {
+      slides.appendChild(child.cloneNode(true));
+    });
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Announcement bar marquee",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_marquee",
+      "label": "Enable marquee animation",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Slider text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "background color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "marquee_speed",
+      "label": "Marquee speed (seconds)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "default": 15
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "richtext",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement bar marquee",
+      "blocks": [
+        {
+          "type": "announcement"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
