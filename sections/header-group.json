@@ -17,12 +17,41 @@
         "announcement_gzDWmA": {
           "type": "announcement",
           "settings": {
-            "text": "Buy 2 Product & Get 30% OFF",
+            "text": "Buy 5 for ₹4,000",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_4BNamP": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 4 for ₹3,400",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_et8gPf": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 3 for ₹2,700",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_Kphkrm": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 2 for ₹1,900",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_Djr6iN": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 1 for ₹1,000",
             "link": "shopify://collections/shop-all"
           }
         },
         "announcement_4n7Mic": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Buy 2 Product & Get 20% OFF",
             "link": "shopify://collections/shop-all"
@@ -30,6 +59,7 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Buy 1 Product & Get 10% OFF",
             "link": "shopify://collections/shop-all"
@@ -38,6 +68,10 @@
       },
       "block_order": [
         "announcement_gzDWmA",
+        "announcement_4BNamP",
+        "announcement_et8gPf",
+        "announcement_Kphkrm",
+        "announcement_Djr6iN",
         "announcement_4n7Mic",
         "announcement-bar-0"
       ],

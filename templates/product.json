@@ -58,7 +58,7 @@
         "offers_pWbCwC": {
           "type": "offers",
           "settings": {
-            "offer_text": "<p><strong>LIMITED TIME OFFERS</strong><br/></p><ul><li>Buy 1 Product & Get <strong>10% OFF</strong></li><li>Buy 2 Products & Get <strong>20% OFF</strong></li><li>Buy 3 Products & Get <strong>30% OFF</strong></li></ul>"
+            "offer_text": "<p><strong>LIMITED TIME OFFERS</strong><br/></p><ul><li>Buy 1 for <strong>₹1,000</strong></li><li>Buy 2 for <strong>₹1,900 </strong></li><li>Buy 3 for <strong>₹2,700 </strong></li><li>Buy 4 for <strong>₹3,400</strong></li><li>Buy 5 for <strong>₹4,000</strong> </li></ul>"
           }
         },
         "description": {
