@@ -238,23 +238,11 @@
   .sticky {
     position: sticky;
   }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
-  }
-  .right-0 {
-    right: calc(var(--spacing) * 0);
-  }
-  .left-0 {
-    left: calc(var(--spacing) * 0);
-  }
   .isolate {
     isolation: isolate;
   }
   .isolation-auto {
     isolation: auto;
-  }
-  .z-10 {
-    z-index: 10;
   }
   .float-end {
     float: inline-end;
@@ -436,6 +424,9 @@
   .h-full {
     height: 100%;
   }
+  .min-h-10 {
+    min-height: calc(var(--spacing) * 10);
+  }
   .min-h-\[0px\] {
     min-height: 0px;
   }
@@ -447,12 +438,6 @@
   }
   .w-\[100\%\] {
     width: 100%;
-  }
-  .w-\[120px\] {
-    width: 120px;
-  }
-  .w-\[150px\] {
-    width: 150px;
   }
   .w-\[200\%\] {
     width: 200%;
@@ -848,9 +833,6 @@
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
-  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -1173,9 +1155,6 @@
     --tw-border-style: solid;
     border-style: solid;
   }
-  .border-\[\#b2b2b2\] {
-    border-color: #b2b2b2;
-  }
   .border-gray-200 {
     border-color: var(--color-gray-200);
   }
@@ -1199,22 +1178,6 @@
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-gradient-to-l {
-    --tw-gradient-position: to left in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-  .bg-gradient-to-r {
-    --tw-gradient-position: to right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-  .from-white {
-    --tw-gradient-from: var(--color-white);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-transparent {
-    --tw-gradient-to: transparent;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .box-decoration-clone {
     -webkit-box-decoration-break: clone;
@@ -1303,9 +1266,6 @@
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
-  }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
   }
   .p-\[8px\] {
     padding: 8px;
@@ -1863,16 +1823,29 @@
       }
     }
   }
-  .hover\:\[animation-play-state\:paused\] {
-    &:hover {
-      @media (hover: hover) {
-        animation-play-state: paused;
-      }
+  .max-md\:min-h-17\.5 {
+    @media (width < 48rem) {
+      min-height: calc(var(--spacing) * 17.5);
     }
   }
-  .max-\[1025px\]\:h-\[45px\] {
-    @media (width < 1025px) {
-      height: 45px;
+  .max-md\:min-h-18\.75 {
+    @media (width < 48rem) {
+      min-height: calc(var(--spacing) * 18.75);
+    }
+  }
+  .max-md\:min-h-\[17\.5rem\] {
+    @media (width < 48rem) {
+      min-height: 17.5rem;
+    }
+  }
+  .max-md\:min-h-\[70px\] {
+    @media (width < 48rem) {
+      min-height: 70px;
+    }
+  }
+  .max-md\:min-h-\[75px\] {
+    @media (width < 48rem) {
+      min-height: 75px;
     }
   }
   .sm\:mt-\[20px\] {
@@ -2078,48 +2051,6 @@
   syntax: "*";
   inherits: false;
   initial-value: 0;
-}
-@property --tw-gradient-position {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-via {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-to {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-via-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 0%;
-}
-@property --tw-gradient-via-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 50%;
-}
-@property --tw-gradient-to-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 100%;
 }
 @property --tw-leading {
   syntax: "*";
@@ -2353,15 +2284,6 @@
       --tw-divide-x-reverse: 0;
       --tw-border-style: solid;
       --tw-divide-y-reverse: 0;
-      --tw-gradient-position: initial;
-      --tw-gradient-from: #0000;
-      --tw-gradient-via: #0000;
-      --tw-gradient-to: #0000;
-      --tw-gradient-stops: initial;
-      --tw-gradient-via-stops: initial;
-      --tw-gradient-from-position: 0%;
-      --tw-gradient-via-position: 50%;
-      --tw-gradient-to-position: 100%;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;

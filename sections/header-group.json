@@ -11,6 +11,96 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "marque_slider_J7Ld6d": {
+      "type": "marque-slider",
+      "blocks": {
+        "announcement_WPBRbA": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "richtext": "<b style=\"color:green;\">Launch Month Offer<b></b></b>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_UUF9Dt": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "richtext": "Buy 1 for <span style=\"color:#FFD166\n\">₹1200 </span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_VF7fbr": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "More You Choose, More You Save.",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_iw37CV": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 2 for <span style=\"\n\">₹2200 </span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_C7jAUC": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 3 for <span style=\"\n\">₹3100 </span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_4FccWc": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "richtext": "<b style=\"color:green;\">Launch Month Offer<b></b></b>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_Ef48p4": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 4 for <span style=\"\n\">₹4000 </span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_hKLi3h": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 5 for <span style=\"\n\">₹4700 </span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_Tzeifx": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "richtext": "More You Choose, More You Save.",
+            "link": "shopify://collections/shop-all"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_WPBRbA",
+        "announcement_UUF9Dt",
+        "announcement_VF7fbr",
+        "announcement_iw37CV",
+        "announcement_C7jAUC",
+        "announcement_4FccWc",
+        "announcement_Ef48p4",
+        "announcement_hKLi3h",
+        "announcement_Tzeifx"
+      ],
+      "name": "Announcement bar marquee",
+      "settings": {
+        "enable_marquee": true,
+        "color": "#FFFFFF",
+        "bg": "#121212",
+        "marquee_speed": 15
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -75,6 +165,7 @@
         "announcement_4n7Mic",
         "announcement-bar-0"
       ],
+      "disabled": true,
       "settings": {
         "auto_rotate": true,
         "change_slides_speed": 5,
@@ -106,6 +197,7 @@
     }
   },
   "order": [
+    "marque_slider_J7Ld6d",
     "announcement-bar",
     "header"
   ]

@@ -156,7 +156,7 @@
       <div class="card__content">
         <div class="card__information"b>
           <h3
-            class="card__heading min-h-[40px] {% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+            class="card__heading min-h-10 max-md:min-h-18.75 {% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
               id="title-{{ section_id }}-{{ card_product.id }}"
             {% endif %}
