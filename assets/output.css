@@ -1833,6 +1833,16 @@
       min-height: calc(var(--spacing) * 18.75);
     }
   }
+  .max-md\:min-h-24\.75 {
+    @media (width < 48rem) {
+      min-height: calc(var(--spacing) * 24.75);
+    }
+  }
+  .max-md\:min-h-27\.75 {
+    @media (width < 48rem) {
+      min-height: calc(var(--spacing) * 27.75);
+    }
+  }
   .max-md\:min-h-\[17\.5rem\] {
     @media (width < 48rem) {
       min-height: 17.5rem;
