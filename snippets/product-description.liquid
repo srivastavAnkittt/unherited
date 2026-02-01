@@ -49,18 +49,6 @@
     </div>
   </div>
 {% endif %}
-
-{% if product.metafields.custom.shipping_return != blank %}
-  <div class="acc-item">
-    <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc5">
-      {{ shipping }}
-    </div>
-    <div id="acc5" class="acc-content hidden py-3 px-4 border-b border-gray-200">
-      {{ product.metafields.custom.shipping_return | metafield_tag }}
-    </div>
-  </div>
-  {% endif %}
-
   {% if product.metafields.custom.legal_information != blank %}
   <div class="acc-item">
     <div class="acc-heading bg-gray-100 border-b border-gray-300 py-3 px-4 font-semibold cursor-pointer" data-target="acc6">
