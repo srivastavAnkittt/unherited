@@ -4,19 +4,19 @@
       <div class="text-center md:text-left w-[480px]">
 
         <div class="flex justify-center md:justify-center">
-            {{ section.settings.founder_image | image_url: width: 500 | image_tag: loading:'lazy', width: 250, height: 250, class: 'w-40 h-40 rounded-full border-8 border-blue-200 object-cover' }}
+            {{ section.settings.founder_image | image_url: width: 500 | image_tag: loading:'lazy', width: 250, height: 250, class: 'w-[250px] h-auto rounded-full border-8 border-blue-200 object-cover' }}
         </div>
-        <h2 class="mt-6 text-3xl font-semibold text-[#D4AF37]! text-center">
+        <h2 class="mt-6 text-[45px]! font-semibold text-[#D4AF37]! text-center">
           {{ section.settings.founder_heading }}
         </h2>
 
-        <p class="text-[#D4AF37]! text-lg mt-2 text-center">
+        <p class="text-[#D4AF37]! text-[22px] mt-2 text-center ">
           {{ section.settings.founder_message }}
         </p>
 
       </div>
 
-      <div class="md:col-span-2 text-white leading-relaxed space-y-5">
+      <div class="md:col-span-2 text-white text-left leading-relaxed space-y-5 text-[17px] font-moonTime">
         {{ section.settings.founder_signature }}
       </div>
     </div>

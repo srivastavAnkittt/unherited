@@ -1,1 +1,21 @@
+
 @import "tailwindcss";
+
+ @theme {
+  --font-moonTime: "MoonTime-Regular", cursive;
+  --font-Play-Fair: "PlayFair-Display-Bold", serif;
+}
+
+@utility font-moonTime {
+  font-family: var(--font-moonTime);
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+}
+
+@utility font-Play-Fair{
+  font-family: var(--font-Play-Fair);
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
