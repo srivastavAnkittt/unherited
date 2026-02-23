@@ -89,6 +89,9 @@
         "information_DgyQqB",
         "share"
       ],
+      "custom_css": [
+        ".rating-star{}"
+      ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",

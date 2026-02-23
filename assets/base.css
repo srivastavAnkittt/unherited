@@ -1046,6 +1046,11 @@ summary::-webkit-details-marker {
     width: 100%;
   }
 
+  span.rate-text{
+    font-size: 11px;
+    padding: 0 7px!important;
+    border-radius: 4px!important;
+  }
   .grid--peek.slider--mobile .grid__item {
     box-sizing: content-box;
     margin: 0;
@@ -1209,6 +1214,20 @@ button.shopify-payment-button__button--unbranded {
 button.shopify-payment-button__button--unbranded {
   min-width: calc(12rem + var(--buttons-border-width) * 2);
   min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+}
+
+span.rate-text { 
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    border-radius: 4px;
+    background: #1fa0a0;
+    padding: 0 7px;
+    color: #fff;
+    font-size: 14px;
 }
 
 .button,

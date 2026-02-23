@@ -15,27 +15,8 @@
         "slide_rkWacK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Banner_3_Deskstop_-_her.jpg",
-            "mobile": "shopify://shop_images/Banner_3_Mobile_-_her.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify://collections/women",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        },
-        "slide_rawRe6": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Banner_2_Deskstop_-_him.jpg",
-            "mobile": "shopify://shop_images/Banner_2_mobile_-_him.jpg",
+            "image": "shopify://shop_images/DESKTOP_VARIANT_-_1.png",
+            "mobile": "shopify://shop_images/MOBILE_VARIANT_-_1.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -50,17 +31,36 @@
             "color_scheme": ""
           }
         },
-        "slide_3Dfg73": {
+        "slide_rawRe6": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Banner_1_Deskstop_-_All.jpg",
-            "mobile": "shopify://shop_images/Banner_1_Mobile_-_All.jpg",
+            "image": "shopify://shop_images/DESKTOP_VARIANT_-_3.png",
+            "mobile": "shopify://shop_images/MOBILE_VARIANT_-_3.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
             "link": "shopify://collections/shop-all",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_3Dfg73": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/DESKTOP_VARIANT_-_2.png",
+            "mobile": "shopify://shop_images/MOBILE_VARIANT_-_2.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://collections/women",
             "button_style_secondary": false,
             "show_text_box": false,
             "box_align": "middle-center",
@@ -500,6 +500,7 @@
       "blocks": {
         "judge_me_reviews_featured_carousel_HXy3Qm": {
           "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {
             "maxwidth": 1080
           }
@@ -508,7 +509,6 @@
       "block_order": [
         "judge_me_reviews_featured_carousel_HXy3Qm"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true
       }
