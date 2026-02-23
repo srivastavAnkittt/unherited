@@ -1,0 +1,64 @@
+<div class="bg-gradient-to-br from-blue-600 to-blue-800 py-20 px-6">
+
+    <div class="max-w-[1152px] mx-auto grid md:grid-cols-3 gap-10 items-start md:flex-nowrap!">
+      <div class="text-center md:text-left w-[480px]">
+
+        <div class="flex justify-center md:justify-center">
+            {{ section.settings.founder_image | image_url: width: 500 | image_tag: loading:'lazy', width: 250, height: 250, class: 'w-40 h-40 rounded-full border-8 border-blue-200 object-cover' }}
+        </div>
+        <h2 class="mt-6 text-3xl font-semibold text-[#D4AF37]! text-center">
+          {{ section.settings.founder_heading }}
+        </h2>
+
+        <p class="text-[#D4AF37]! text-lg mt-2 text-center">
+          {{ section.settings.founder_message }}
+        </p>
+
+      </div>
+
+      <div class="md:col-span-2 text-white leading-relaxed space-y-5">
+        {{ section.settings.founder_signature }}
+      </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Founder Note",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "founder_image",
+      "label": "Founder Image"
+    },
+    {
+    "type": "text",
+    "id": "founder_heading",
+    "label": "Founder Note Heading",
+    "default": "Founder’s Note" 
+    },
+    {
+      "type": "inline_richtext",
+      "id": "founder_message",
+      "label": "Founder's Message"
+    },
+    {
+    "type": "header",
+    "content": "Founder Note Section"
+},
+{
+    "type": "richtext",
+    "id": "founder_signature",
+    "label": "Founder Signature"
+}
+  ],
+    "presets": [
+        {
+        "name": "Founder Note"
+        }
+    ]
+}
+{% endschema %}
