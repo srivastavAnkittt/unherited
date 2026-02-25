@@ -512,6 +512,76 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "faq_eYtPEp": {
+      "type": "faq",
+      "blocks": {
+        "faq_item_yJfdB3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I choose the right perfume for myself?",
+            "answer": "Choosing a perfume depends on your personality and preference. Fresh and citrus scents are great for daily wear, woody and spicy notes work well for evenings, and floral fragrances are perfect for elegant occasions."
+          }
+        },
+        "faq_item_tYGdqN": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you offer perfumes for both men and women?",
+            "answer": "Yes. Unherited offers premium fragrances for men and women, crafted to suit different personalities, moods, and occasions."
+          }
+        },
+        "faq_item_Uh73aW": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are Unherited perfumes good for gifting?",
+            "answer": "Yes. Our perfumes come in premium, minimal packaging making them perfect for birthdays, anniversaries, festive gifting, corporate gifting, and special occasions."
+          }
+        },
+        "faq_item_GimcXk": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I apply perfume to make it last longer?",
+            "answer": "Apply perfume on pulse points such as wrists, neck, and behind ears. Avoid rubbing your wrists together. For better longevity, apply on moisturized skin and store the bottle in a cool, dry place."
+          }
+        },
+        "faq_item_FXaM7n": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the difference between Eau de Parfum and Eau de Toilette?",
+            "answer": "Eau de Parfum contains a higher concentration of fragrance oils, making it more long-lasting and intense compared to Eau de Toilette, which is lighter and typically lasts fewer hours."
+          }
+        },
+        "faq_item_xqxPt6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are your perfumes suitable for Indian weather?",
+            "answer": "Absolutely. Our perfumes are formulated to perform well in Indian climate conditions, including heat and humidity, ensuring better projection and longevity."
+          }
+        },
+        "faq_item_4Di7VA": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are Unherited perfumes long lasting?",
+            "answer": "Yes, Unherited perfumes are designed using high-quality fragrance oils and balanced compositions to provide long-lasting performance. Depending on skin type and application method, most fragrances last between 8–10 hours or more."
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_yJfdB3",
+        "faq_item_tYGdqN",
+        "faq_item_Uh73aW",
+        "faq_item_GimcXk",
+        "faq_item_FXaM7n",
+        "faq_item_xqxPt6",
+        "faq_item_4Di7VA"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "faq_heading": "Frequently Asked Questions",
+        "faq_message": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -524,6 +594,7 @@
     "featured_collection_heprrF",
     "slider_Wn6yEX",
     "17673568610b5f281a",
-    "17673572922600d15c"
+    "17673572922600d15c",
+    "faq_eYtPEp"
   ]
 }
