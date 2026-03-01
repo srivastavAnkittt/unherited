@@ -114,7 +114,7 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+          <h3 class="card__heading{% if show_excerpt %} h2{% endif %}  text-[18px]! md:text-[22px]!">
             <a href="{{ article.url }}" class="full-unstyled-link">
               {{ article.title | truncate: 50 | escape }}
             </a>
@@ -129,7 +129,7 @@
           </div>
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-              <p class="article-card__excerpt rte-width">
+              <p class="article-card__excerpt rte-width text-[14px]! md:text-[17px]!">
                 {%- if article.excerpt.size > 0 -%}
                   {{ article.excerpt | strip_html | truncatewords: 30 }}
                 {%- else -%}
