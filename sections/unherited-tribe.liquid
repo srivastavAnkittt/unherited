@@ -1,0 +1,125 @@
+<section id="unherited-tribe-{{ section.id }}" class="relative overflow-hidden text-white">
+  <style>
+    #unherited-tribe-{{ section.id }} {
+      --brand-red: {{ section.settings.brand_red }};
+      --dark-color: {{ section.settings.dark_color }};
+
+      {% if section.settings.bottom_image != blank %}
+        --tribe-bg-desktop: url('{{ section.settings.bottom_image | image_url: width: 2200 }}');
+        --tribe-ratio-desktop: {{ section.settings.bottom_image.aspect_ratio }};
+      {% endif %}
+
+      {% if section.settings.bottom_image_mobile != blank %}
+        --tribe-bg-mobile: url('{{ section.settings.bottom_image_mobile | image_url: width: 900 }}');
+        --tribe-ratio-mobile: {{ section.settings.bottom_image_mobile.aspect_ratio }};
+      {% elsif section.settings.bottom_image != blank %}
+        --tribe-bg-mobile: url('{{ section.settings.bottom_image | image_url: width: 900 }}');
+        --tribe-ratio-mobile: {{ section.settings.bottom_image.aspect_ratio }};
+      {% endif %}
+    }
+
+    #unherited-tribe-{{ section.id }} .serif-font {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    #unherited-tribe-{{ section.id }} .tribe-bg {
+      background-color: var(--brand-red);
+      background-image: var(--tribe-bg-mobile);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+      width: 100%;
+      aspect-ratio: var(--tribe-ratio-mobile);
+    }
+
+    @media screen and (min-width: 768px) {
+      #unherited-tribe-{{ section.id }} .tribe-bg {
+        background-image: var(--tribe-bg-desktop);
+        aspect-ratio: var(--tribe-ratio-desktop);
+      }
+    }
+  </style>
+
+  <div class="tribe-bg relative flex justify-center text-center px-[20px] pt-[58px] md:pt-[58px]">
+    <div class="relative z-[2]">
+      {% if section.settings.heading != blank %}
+        <h2 class="serif-font text-[38px] leading-[38px] md:text-[44px] md:leading-[48px]">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.subheading != blank %}
+        <p class="mt-[12px] text-[11px] md:text-[12px] tracking-[0.5px] text-white/80">
+          {{ section.settings.subheading }}
+        </p>
+      {% endif %}
+
+      {% if section.settings.button_text != blank %}
+        <a
+          href="{{ section.settings.button_link }}"
+          class="inline-flex mt-[16px] px-[18px] py-[7px] bg-[var(--dark-color)] text-white text-[10px] md:text-[11px] uppercase tracking-[0.8px]"
+        >
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Unherited Tribe",
+  "settings": [
+    {
+      "type": "color",
+      "id": "brand_red",
+      "label": "Background color",
+      "default": "#8F0000"
+    },
+    {
+      "type": "color",
+      "id": "dark_color",
+      "label": "Button color",
+      "default": "#111111"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Tribe Speaks"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "From Every Corner of India"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Join Tribe"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_image",
+      "label": "Desktop background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_image_mobile",
+      "label": "Mobile background image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Unherited Tribe"
+    }
+  ]
+}
+{% endschema %}

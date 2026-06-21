@@ -1,0 +1,168 @@
+<section id="unherited-best-seller-{{ section.id }}" class="bg-[var(--section-bg)] px-[20px] md:px-[40px] py-[52px] md:py-[90px]">
+  <style>
+    #unherited-best-seller-{{ section.id }} {
+      --section-bg: {{ section.settings.bg_color }};
+      --brand-red: {{ section.settings.brand_red }};
+    }
+
+    #unherited-best-seller-{{ section.id }} .serif-font {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+  </style>
+
+  {% assign selected_product = section.settings.product %}
+
+  <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.1fr_1fr] place-content-center items-center gap-[34px] md:gap-[50px]">
+    <div>
+      {% if section.settings.heading != blank %}
+        <h2 class="serif-font text-[44px] leading-[39px] md:text-[66px] md:leading-[58px] text-[var(--brand-red)]">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      <div class="w-[58px] h-px bg-[var(--brand-red)] my-[22px]"></div>
+
+      {% if section.settings.product_title != blank %}
+        <h3 class="serif-font text-[38px] leading-[38px] md:text-[60px] md:leading-[60px] italic text-[var(--brand-red)]">
+          {{ section.settings.product_title }}
+        </h3>
+      {% elsif selected_product != blank %}
+        <h3 class="serif-font text-[38px] leading-[38px] md:text-[60px] md:leading-[60px] italic text-[var(--brand-red)]">
+          {{ selected_product.title }}
+        </h3>
+      {% endif %}
+
+      {% assign button_url = section.settings.button_link %}
+      {% if button_url == blank and selected_product != blank %}
+        {% assign button_url = selected_product.url %}
+      {% endif %}
+{% if section.settings.button_text != blank %}
+  <a
+    href="{{ button_url }}"
+    class="!hidden md:!inline-flex mt-[40px] px-[20px] py-[8px] bg-[var(--brand-red)] text-white text-[12px] uppercase tracking-[0.8px]"
+  >
+    {{ section.settings.button_text }}
+  </a>
+{% endif %}
+    </div>
+
+    <div class="flex justify-center">
+      {% if section.settings.product_image != blank %}
+        <img
+          src="{{ section.settings.product_image | image_url: width: 750 }}"
+          alt="{{ section.settings.product_title | escape }}"
+          width="750"
+          height="850"
+          loading="lazy"
+          class="w-[250px] md:w-[380px] h-auto object-contain"
+        >
+      {% elsif selected_product.featured_image != blank %}
+        <img
+          src="{{ selected_product.featured_image | image_url: width: 750 }}"
+          alt="{{ selected_product.title | escape }}"
+          width="750"
+          height="850"
+          loading="lazy"
+          class="w-[250px] md:w-[380px] h-auto object-contain"
+        >
+      {% endif %}
+    </div>
+
+    <div class="md:pt-[40px]">
+      {% if section.settings.meta_text != blank %}
+        <p class="mb-[50px] md:mb-[90px] text-[13px] md:text-[15px] text-black">
+          {{ section.settings.meta_text }}
+        </p>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <p class="max-w-[390px] text-[14px] md:text-[15px] leading-[22px] text-black/70">
+          {{ section.settings.description }}
+        </p>
+      {% elsif selected_product.description != blank %}
+        <div class="max-w-[390px] text-[14px] md:text-[15px] leading-[22px] text-black/70">
+          {{ selected_product.description | strip_html | truncatewords: 35 }}
+        </div>
+      {% endif %}
+
+      {% if section.settings.button_text != blank %}
+        <a
+          href="{{ button_url }}"
+          class="block md:hidden inline-flex mt-[40px] px-[20px] py-[8px] bg-[var(--brand-red)] text-white text-[12px] uppercase tracking-[0.8px]"
+        >
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Unherited Best Seller",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#F3F0E5"
+    },
+    {
+      "type": "color",
+      "id": "brand_red",
+      "label": "Brand red",
+      "default": "#8F0000"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Select product"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Best Seller"
+    },
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Display product title",
+      "default": "Artist"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product image override"
+    },
+    {
+      "type": "text",
+      "id": "meta_text",
+      "label": "Meta text",
+      "default": "Unisex | Amber Oud | 30% Extrait de Parfum"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Artist crafts bold richness with a warm amber oud character. A refined signature made to stay memorable."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link override"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Unherited Best Seller"
+    }
+  ]
+}
+{% endschema %}

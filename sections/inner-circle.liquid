@@ -1,0 +1,48 @@
+
+ <div class="relative flex justify-center
+         bg-no-repeat bg-cover
+         bg-[position:center_top]
+         md:bg-center
+         min-h-[30vh] md:min-h-[80vh] lg:min-h-screen"
+    style="background-image: url('{{ section.settings.Inner.src | img_url: '2048x' }}')">
+
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="container relative z-10 text-center text-white! pt-10 md:pt-[100px] px-4">
+      <h1 class="text-[20px] md:text-5xl text-white! font-semibold tracking-wide">
+        {{ section.settings.Inner_mes }}
+      </h1>
+      <p class="text-gray-300! mt-3 text-sm md:text-lg">
+        {{ section.settings.Inner_message }}
+      </p>
+    </div>
+  </div>
+{% schema %}
+{
+  "name": "Inner Circle",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "Inner",
+      "label": "Inner Circle Image"
+    },
+    {
+      "type": "text",
+      "id": "Inner_mes",
+      "label": "Inner Circle Heading",
+      "default": "The Inner Circle"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "Inner_message",
+      "label": "Inner Circle Message"
+    }
+  ],
+    "presets": [
+        {
+        "name": "Inner Circle"
+        }
+    ]
+}
+{% endschema %}

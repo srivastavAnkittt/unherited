@@ -1,0 +1,213 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "marque_slider_J7Ld6d": {
+      "type": "marque-slider",
+      "blocks": {
+        "announcement_WPBRbA": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "richtext": "<b style=\"color:green;\">Launch Month Offer<b></b></b>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_UUF9Dt": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "richtext": "Buy 1 for <span style=\"color:#FFD166\n\">₹1200 </span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_VF7fbr": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "More You Choose, More You Save.",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_C7jAUC": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 1 for <span style=\"\n\">₹999</span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_iw37CV": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 2 for <span style=\"\n\">₹1899 </span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_UX9ULE": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 3 for <span style=\"\n\">₹2699</span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_4FccWc": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "richtext": "<b style=\"color:green;\">Launch Month Offer<b></b></b>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_Ef48p4": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 4 for <span style=\"\n\">₹3399 </span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_hKLi3h": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 5 for <span style=\"\n\">₹3999 </span>",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_Tzeifx": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "richtext": "More You Choose, More You Save.",
+            "link": "shopify://collections/shop-all"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_WPBRbA",
+        "announcement_UUF9Dt",
+        "announcement_VF7fbr",
+        "announcement_C7jAUC",
+        "announcement_iw37CV",
+        "announcement_UX9ULE",
+        "announcement_4FccWc",
+        "announcement_Ef48p4",
+        "announcement_hKLi3h",
+        "announcement_Tzeifx"
+      ],
+      "disabled": true,
+      "name": "Announcement bar marquee",
+      "settings": {
+        "enable_marquee": true,
+        "color": "#ffffff",
+        "bg": "#121212",
+        "marquee_speed": 15
+      }
+    },
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_gzDWmA": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 5 for ₹4,000",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_4BNamP": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 4 for ₹3,400",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_et8gPf": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 3 for ₹2,700",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_Kphkrm": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 2 for ₹1,900",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_Djr6iN": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 1 for ₹1,000",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_4n7Mic": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Buy 2 Product & Get 20% OFF",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement-bar-0": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Buy 1 Product & Get 10% OFF",
+            "link": "shopify://collections/shop-all"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_gzDWmA",
+        "announcement_4BNamP",
+        "announcement_et8gPf",
+        "announcement_Kphkrm",
+        "announcement_Djr6iN",
+        "announcement_4n7Mic",
+        "announcement-bar-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-4",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "always",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "marque_slider_J7Ld6d",
+    "announcement-bar",
+    "header"
+  ]
+}

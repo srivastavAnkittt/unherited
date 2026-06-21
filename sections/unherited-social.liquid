@@ -1,0 +1,124 @@
+<section id="unherited-social-{{ section.id }}" class="bg-[var(--section-bg)] px-[16px] md:px-[40px] py-[36px] md:py-[50px]">
+  <style>
+    #unherited-social-{{ section.id }} {
+      --section-bg: {{ section.settings.bg_color }};
+    }
+  </style>
+
+  {% if section.settings.heading != blank %}
+    <div class="text-center mb-[26px]">
+      <p class="text-[12px] uppercase tracking-[1.5px] text-black">
+        — {{ section.settings.heading }} —
+      </p>
+    </div>
+  {% endif %}
+
+  <div class="max-w-[1280px] mx-auto flex md:grid md:grid-cols-5 gap-[14px] overflow-x-auto md:overflow-visible pb-[6px]">
+    {% for block in section.blocks %}
+      <a
+        href="{{ block.settings.link }}"
+        class="relative block min-w-[220px] md:min-w-0 overflow-hidden group"
+        {{ block.shopify_attributes }}
+      >
+        {% if block.settings.image != blank %}
+          <img
+            src="{{ block.settings.image | image_url: width: 650 }}"
+            alt="{{ block.settings.title | escape }}"
+            width="650"
+            height="850"
+            loading="lazy"
+            class="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105"
+          >
+        {% else %}
+          <div class="w-full aspect-[3/4] bg-[#ccc]"></div>
+        {% endif %}
+
+        <div class="absolute inset-x-0 bottom-0 p-[12px] bg-gradient-to-t from-black/70 to-transparent text-white">
+          {% if block.settings.title != blank %}
+            <p class="text-[14px] leading-[17px]">
+              {{ block.settings.title }}
+            </p>
+          {% endif %}
+
+          {% if block.settings.stats != blank %}
+            <p class="mt-[8px] text-[11px] text-white/85">
+              {{ block.settings.stats }}
+            </p>
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Unherited Social",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#F3F0E5"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Discover Our Social"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "social",
+      "name": "Social card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Long Lasting Fragrance"
+        },
+        {
+          "type": "text",
+          "id": "stats",
+          "label": "Stats",
+          "default": "1,459"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Unherited Social",
+      "blocks": [
+        {
+          "type": "social"
+        },
+        {
+          "type": "social"
+        },
+        {
+          "type": "social"
+        },
+        {
+          "type": "social"
+        },
+        {
+          "type": "social"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

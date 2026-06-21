@@ -1,0 +1,107 @@
+<section id="unherited-marquee-{{ section.id }}" class="overflow-hidden bg-[var(--brand-red)]">
+  <style>
+    #unherited-marquee-{{ section.id }} {
+      --brand-red: {{ section.settings.brand_red }};
+    }
+
+    #unherited-marquee-{{ section.id }} .marquee-track {
+      animation: marquee-{{ section.id }} {{ section.settings.speed }}s linear infinite;
+    }
+
+    @keyframes marquee-{{ section.id }} {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+
+  <div class="marquee-track flex w-max whitespace-nowrap">
+    {% for i in (1..2) %}
+      {% for block in section.blocks %}
+        <div
+          class="px-[28px] py-[8px] text-white text-[12px] md:text-[14px]"
+          {{ block.shopify_attributes }}
+        >
+          {{ block.settings.text }}
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Unherited Marquee",
+  "settings": [
+    {
+      "type": "color",
+      "id": "brand_red",
+      "label": "Background color",
+      "default": "#8F0000"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Speed",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Marquee item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "30% Essential Oil Concentration"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Unherited Marquee",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "text": "Ingredients"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "text": "30% Essential Oil Concentration"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "text": "Extrait De Parfum"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "text": "Free shipping"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "text": "IFRA compliant Skin Safe Ingredients"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

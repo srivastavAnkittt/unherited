@@ -1,0 +1,443 @@
+<section id="unherited-founder-video-{{ section.id }}" class="unherited-founder-video">
+  <style>
+    #unherited-founder-video-{{ section.id }} {
+      --brand-red: {{ section.settings.brand_red }};
+      background: #111;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+
+      {% if section.settings.desktop_banner != blank %}
+        --founder-ratio-desktop: {{ section.settings.desktop_banner.aspect_ratio }};
+      {% else %}
+        --founder-ratio-desktop: 1.78;
+      {% endif %}
+
+      {% if section.settings.mobile_banner != blank %}
+        --founder-ratio-mobile: {{ section.settings.mobile_banner.aspect_ratio }};
+      {% elsif section.settings.desktop_banner != blank %}
+        --founder-ratio-mobile: {{ section.settings.desktop_banner.aspect_ratio }};
+      {% else %}
+        --founder-ratio-mobile: 0.56;
+      {% endif %}
+    }
+
+    #unherited-founder-video-{{ section.id }} .serif-font {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    #unherited-founder-video-{{ section.id }} .founder-media-wrap {
+      width: 100%;
+      aspect-ratio: var(--founder-ratio-mobile);
+      position: relative;
+      overflow: hidden;
+      background: #111;
+    }
+
+    @media screen and (min-width: 768px) {
+      #unherited-founder-video-{{ section.id }} .founder-media-wrap {
+        aspect-ratio: var(--founder-ratio-desktop);
+      }
+    }
+
+    #unherited-founder-video-{{ section.id }} .founder-poster {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    #unherited-founder-video-{{ section.id }} .founder-poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #unherited-founder-video-{{ section.id }} .founder-video-player {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: none;
+      background: #000;
+    }
+
+    #unherited-founder-video-{{ section.id }}.is-video-active .founder-poster {
+      display: none;
+    }
+
+    #unherited-founder-video-{{ section.id }}.is-video-active .founder-video-player {
+      display: block;
+    }
+
+    #unherited-founder-video-{{ section.id }} video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #unherited-founder-video-{{ section.id }} .desktop-only {
+      display: none !important;
+    }
+
+    #unherited-founder-video-{{ section.id }} .mobile-only {
+      display: block;
+    }
+
+    @media screen and (min-width: 768px) {
+      #unherited-founder-video-{{ section.id }} .desktop-only {
+        display: block !important;
+      }
+
+      #unherited-founder-video-{{ section.id }} .mobile-only {
+        display: none;
+      }
+    }
+
+    #unherited-founder-video-{{ section.id }} .overlay-shade {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background: rgba(0, 0, 0, 0.08);
+      pointer-events: none;
+    }
+
+    #unherited-founder-video-{{ section.id }} .desktop-heading {
+      position: absolute;
+      z-index: 4;
+      left: 7.5%;
+      top: 20%;
+      color: #fff;
+    }
+
+    #unherited-founder-video-{{ section.id }} .desktop-founder-name {
+      position: absolute;
+      z-index: 4;
+      left: 7.5%;
+      bottom: 14%;
+    }
+
+    #unherited-founder-video-{{ section.id }} .mobile-text {
+      position: absolute;
+      z-index: 4;
+      left: 0;
+      right: 0;
+      top: 8%;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    #unherited-founder-video-{{ section.id }} .founder-title p {
+      margin: 0;
+    }
+
+    #unherited-founder-video-{{ section.id }} .founder-title em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    #unherited-founder-video-{{ section.id }} .desktop-heading .founder-title {
+      font-size: 48px;
+      line-height: 42px;
+      display: block;
+    }
+
+    #unherited-founder-video-{{ section.id }} .mobile-text .founder-title {
+      font-size: 33px;
+      line-height: 30px;
+      display: block;
+    }
+
+    #unherited-founder-video-{{ section.id }} .caption {
+      display: block;
+      font-size: 13px;
+      line-height: 16px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    #unherited-founder-video-{{ section.id }} .name {
+      display: block;
+      font-size: 13px;
+      line-height: 16px;
+      color: var(--brand-red);
+    }
+
+    #unherited-founder-video-{{ section.id }} .mobile-text .caption,
+    #unherited-founder-video-{{ section.id }} .mobile-text .name {
+      font-size: 11px;
+      line-height: 14px;
+    }
+
+    #unherited-founder-video-{{ section.id }} .mobile-name-wrap {
+      margin-top: 14px;
+    }
+
+    #unherited-founder-video-{{ section.id }} .play-btn {
+      position: absolute;
+      z-index: 5;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #unherited-founder-video-{{ section.id }} .play-icon {
+      margin-left: 4px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 16px solid var(--brand-red);
+    }
+
+    @media screen and (max-width: 767px) {
+      #unherited-founder-video-{{ section.id }} .play-btn {
+        width: 50px;
+        height: 50px;
+      }
+
+      #unherited-founder-video-{{ section.id }} .play-icon {
+        border-top-width: 9px;
+        border-bottom-width: 9px;
+        border-left-width: 14px;
+      }
+    }
+  </style>
+
+  <div class="founder-media-wrap">
+    <div
+      class="founder-poster founder-poster-{{ section.id }}"
+      role="button"
+      tabindex="0"
+      aria-label="Play founder video"
+    >
+      {% if section.settings.desktop_banner != blank %}
+        <img
+          src="{{ section.settings.desktop_banner | image_url: width: 2000 }}"
+          alt="Founder video banner"
+          width="2000"
+          height="900"
+          loading="lazy"
+          class="{% if section.settings.mobile_banner != blank %}desktop-only{% endif %}"
+        >
+      {% endif %}
+
+      {% if section.settings.mobile_banner != blank %}
+        <img
+          src="{{ section.settings.mobile_banner | image_url: width: 900 }}"
+          alt="Founder video mobile banner"
+          width="900"
+          height="1600"
+          loading="lazy"
+          class="mobile-only"
+        >
+      {% endif %}
+
+      <span class="overlay-shade"></span>
+
+      <div class="desktop-only desktop-heading">
+        {% if section.settings.heading != blank %}
+          <span class="founder-title serif-font">
+            {{ section.settings.heading }}
+          </span>
+        {% endif %}
+      </div>
+
+      <div class="desktop-only desktop-founder-name">
+        {% if section.settings.caption != blank %}
+          <span class="caption">{{ section.settings.caption }}</span>
+        {% endif %}
+
+        {% if section.settings.name != blank %}
+          <span class="name">{{ section.settings.name }}</span>
+        {% endif %}
+      </div>
+
+      <div class="mobile-only mobile-text">
+        {% if section.settings.heading != blank %}
+          <span class="founder-title serif-font">
+            {{ section.settings.heading }}
+          </span>
+        {% endif %}
+
+        <div class="mobile-name-wrap">
+          {% if section.settings.caption != blank %}
+            <span class="caption">{{ section.settings.caption }}</span>
+          {% endif %}
+
+          {% if section.settings.name != blank %}
+            <span class="name">{{ section.settings.name }}</span>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if section.settings.desktop_video != blank or section.settings.mobile_video != blank %}
+        <span class="play-btn">
+          <span class="play-icon"></span>
+        </span>
+      {% endif %}
+    </div>
+
+    <div class="founder-video-player founder-video-player-{{ section.id }}">
+      {% if section.settings.desktop_video != blank %}
+        <div class="desktop-founder-video desktop-only" style="width:100%; height:100%;">
+          {{
+            section.settings.desktop_video
+            | video_tag:
+              controls: true,
+              autoplay: false,
+              loop: false,
+              muted: false,
+              playsinline: true
+          }}
+        </div>
+      {% endif %}
+
+      {% if section.settings.mobile_video != blank %}
+        <div class="mobile-founder-video mobile-only" style="width:100%; height:100%;">
+          {{
+            section.settings.mobile_video
+            | video_tag:
+              controls: true,
+              autoplay: false,
+              loop: false,
+              muted: false,
+              playsinline: true
+          }}
+        </div>
+      {% elsif section.settings.desktop_video != blank %}
+        <div class="mobile-founder-video mobile-only" style="width:100%; height:100%;">
+          {{
+            section.settings.desktop_video
+            | video_tag:
+              controls: true,
+              autoplay: false,
+              loop: false,
+              muted: false,
+              playsinline: true
+          }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function initFounderVideo{{ section.id | replace: '-', '_' }}() {
+        var section = document.querySelector('#unherited-founder-video-{{ section.id }}');
+        if (!section) return;
+
+        var poster = section.querySelector('.founder-poster-{{ section.id }}');
+        var player = section.querySelector('.founder-video-player-{{ section.id }}');
+
+        if (!poster || !player) return;
+
+        if (poster.dataset.videoInit === 'true') return;
+        poster.dataset.videoInit = 'true';
+
+        function playFounderVideo() {
+          section.classList.add('is-video-active');
+
+          var video = null;
+
+          if (window.matchMedia('(max-width: 767px)').matches) {
+            video = player.querySelector('.mobile-founder-video video');
+          } else {
+            video = player.querySelector('.desktop-founder-video video');
+          }
+
+          if (!video) {
+            video = player.querySelector('video');
+          }
+
+          if (video) {
+            video.play().catch(function () {});
+          }
+        }
+
+        poster.addEventListener('click', playFounderVideo);
+
+        poster.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            playFounderVideo();
+          }
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', initFounderVideo{{ section.id | replace: '-', '_' }});
+      document.addEventListener('shopify:section:load', initFounderVideo{{ section.id | replace: '-', '_' }});
+      initFounderVideo{{ section.id | replace: '-', '_' }}();
+    })();
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "Unherited Founder Video",
+  "settings": [
+    {
+      "type": "color",
+      "id": "brand_red",
+      "label": "Red text / play color",
+      "default": "#8F0000"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_banner",
+      "label": "Desktop banner image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_banner",
+      "label": "Mobile banner image"
+    },
+    {
+      "type": "video",
+      "id": "desktop_video",
+      "label": "Desktop video"
+    },
+    {
+      "type": "video",
+      "id": "mobile_video",
+      "label": "Mobile video"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Unwrap<br><em>Unherited</em></p>"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "With Founder"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Founder name",
+      "default": "Vishwajeet Singh"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Unherited Founder Video"
+    }
+  ]
+}
+{% endschema %}
