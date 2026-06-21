@@ -9,8 +9,13 @@
 }
 .section-header .header{
   position: absolute;
+  width: 100%;
 }
-
+.header--middle-left .header__inline-menu{
+    justify-self: end;
+    grid-area: icons;
+    padding-right: 13.8rem;
+}
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
