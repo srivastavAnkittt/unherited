@@ -211,6 +211,74 @@
         "button_link": ""
       }
     },
+    "marque_slider_yiM4kQ": {
+      "type": "marque-slider",
+      "blocks": {
+        "announcement_awebrG": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "We don't just make fragrances, we build connections. The Unherited Tribe is made up of everyday people across India who chose quality over hype, and found a scent that actually feels like them. These are their words, their unboxings, their moments. Unfiltered.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_awebrG"
+      ],
+      "disabled": true,
+      "name": "Announcement bar marquee",
+      "settings": {
+        "enable_marquee": false,
+        "color": "#edebde",
+        "bg": "#810100",
+        "marquee_speed": 15
+      }
+    },
+    "rich_text_rUCxQh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NYPCPj": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_np4dFW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_jXa7YL": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NYPCPj",
+        "text_np4dFW",
+        "button_jXa7YL"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "unherited_community_xNmix8": {
       "type": "unherited-community",
       "blocks": {
@@ -267,14 +335,14 @@
       ],
       "name": "Community Reviews",
       "settings": {
-        "bg_color": "#F1EDE4",
-        "border_color": "#7A1F1F",
+        "bg_color": "#f1ede4",
+        "border_color": "#7a1f1f",
         "padding_top_desktop": 60,
         "padding_bottom_desktop": 60,
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 30,
-        "heading": "Straight From The Community!",
-        "heading_color": "#7A1F1F",
+        "heading11": "<p><em>Straight </em></p><p><strong>From The</strong> </p><p><em>Community!</em></p>",
+        "heading_color": "#7a1f1f",
         "heading_size_desktop": 48,
         "heading_size_mobile": 28,
         "description": "From first sprays to daily signatures, here's what the Tribe has been saying.",
@@ -312,6 +380,8 @@
     "founder_note_WxeUaa",
     "voice_of_tribe_rqtxfR",
     "unherited_hero_4QhBwE",
+    "marque_slider_yiM4kQ",
+    "rich_text_rUCxQh",
     "unherited_community_xNmix8",
     "unherited_hero_tUing4"
   ]

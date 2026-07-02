@@ -37,19 +37,19 @@
     >
 
       <!-- LEFT: Heading + Description -->
-      <div class="w-full md:w-[32%] flex-shrink-0 text-center md:text-left order-1">
-        {%- if section.settings.heading != blank -%}
-          <h2
-            class="font-serif italic leading-tight community-reviews-heading-{{ sec_id }}"
+      <div class="h-[stretch] relative w-full md:w-[32%] flex-shrink-0 text-center md:text-left order-1">
+        {%- if section.settings.heading11 != blank -%}
+          <div
+            class="font-serif leading-tight community-reviews-heading-{{ sec_id }}"
             style="color: var(--cr-heading-color); font-size: var(--cr-heading-size-m);"
           >
-            {{ section.settings.heading }}
-          </h2>
+            {{ section.settings.heading11 }}
+          </div>
         {%- endif -%}
 
         {%- if section.settings.description != blank -%}
           <p
-            class="mt-4 community-reviews-desc-{{ sec_id }}"
+            class="md:absolute bottom-5 mt-4 community-reviews-desc-{{ sec_id }}"
             style="color: var(--cr-desc-color); font-size: var(--cr-desc-size-m);"
           >
             {{ section.settings.description }}
@@ -200,7 +200,7 @@
     { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 100, "step": 5, "unit": "px", "label": "Padding Bottom (Mobile)", "default": 30 },
 
     { "type": "header", "content": "Heading" },
-    { "type": "text", "id": "heading", "label": "Heading Text", "default": "Straight From The Community!" },
+    { "type": "richtext", "id": "heading11", "label": "Heading Text aaaa" },
     { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#7A1F1F" },
     { "type": "range", "id": "heading_size_desktop", "min": 20, "max": 80, "step": 1, "unit": "px", "label": "Heading Font Size (Desktop)", "default": 48 },
     { "type": "range", "id": "heading_size_mobile", "min": 16, "max": 48, "step": 1, "unit": "px", "label": "Heading Font Size (Mobile)", "default": 28 },

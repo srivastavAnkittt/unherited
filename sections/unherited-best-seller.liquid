@@ -14,11 +14,11 @@
 <div class="page-width">
 
   <div class="grid grid-cols-1 md:grid-cols-[1fr_1.1fr_1fr] place-content-center items-center justify-between gap-[34px] md:gap-[50px]">
-    <div>
+    <div class="m-auto text-center md:text-left">
       {% if section.settings.heading != blank %}
-        <h2 class="serif-font text-[44px] leading-[39px] md:text-[66px] md:leading-[58px] text-[var(--brand-red)]">
+        <div class="serif-font text-[44px] leading-[39px] md:text-[66px] md:leading-[58px] text-[var(--brand-red)]">
           {{ section.settings.heading }}
-        </h2>
+        </div>
       {% endif %}
 
       <div class="w-[58px] h-px bg-[var(--brand-red)] my-[22px]"></div>
@@ -121,10 +121,9 @@
       "label": "Select product"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "heading",
       "label": "Heading",
-      "default": "Our Best Seller"
     },
     {
       "type": "text",

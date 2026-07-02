@@ -104,6 +104,44 @@
         "button_link": "shopify://products/for-women-fruity-gourmand-22-extrait-de-parfum"
       }
     },
+    "marque_slider_y7RJLf": {
+      "type": "marque-slider",
+      "blocks": {
+        "announcement_Gfh7iD": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "30% Essential Oil Concentration Extrait De Parfum",
+            "link": ""
+          }
+        },
+        "announcement_afMYAn": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Free shipping",
+            "link": ""
+          }
+        },
+        "announcement_wAMdN4": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "IFRA compliant Skin Safe Ingredients",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_Gfh7iD",
+        "announcement_afMYAn",
+        "announcement_wAMdN4"
+      ],
+      "name": "Announcement bar marquee",
+      "settings": {
+        "enable_marquee": true,
+        "color": "#edebde",
+        "bg": "#810100",
+        "marquee_speed": 15
+      }
+    },
     "unherited_collection_p8WcmH": {
       "type": "unherited-collection",
       "blocks": {
@@ -144,8 +182,8 @@
         "bg_color": "#f3f0e5",
         "brand_red": "#8f0000",
         "product": "",
-        "heading": "Our Best Seller",
-        "product_title": "Artist",
+        "heading": "<p><em>Our</em> <strong>Best</strong></p><p><strong> Seller</strong></p><p></p><p>-</p><p><br/><em>Artist </em></p>",
+        "product_title": "",
         "product_image": "shopify://shop_images/ChatGPT_Image_Jun_18_2026_10_25_28_PM.png",
         "meta_text": "Unisex | Amber Oud | 30% Extrait de Parfum",
         "description": "Artist crafts bold richness with a warm amber oud character. A refined signature made to stay memorable.",
@@ -703,6 +741,7 @@
   "order": [
     "gallery_banner_4im6k8",
     "unherited_hero_yLNYEx",
+    "marque_slider_y7RJLf",
     "unherited_collection_p8WcmH",
     "unherited_best_seller_dKqdCK",
     "unherited_tribe_GCNdwC",
