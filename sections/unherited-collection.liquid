@@ -1,4 +1,4 @@
-<section id="unherited-collection-{{ section.id }}" class="bg-[var(--section-bg)] px-[16px] md:px-[40px] py-[36px] md:py-[52px]">
+<section id="unherited-collection-{{ section.id }}" class="bg-[var(--section-bg)]">
   <style>
     #unherited-collection-{{ section.id }} {
       --section-bg: {{ section.settings.bg_color }};
@@ -9,7 +9,7 @@
       font-family: Georgia, "Times New Roman", serif;
     }
   </style>
-
+<div class="page-width">
   {% if section.settings.heading != blank %}
     <div class="text-center mb-[26px]">
       <p class="text-[12px] uppercase tracking-[1.5px] text-black">
@@ -18,7 +18,7 @@
     </div>
   {% endif %}
 
-  <div class="max-w-[1280px] mx-auto !grid grid-cols-1 md:grid-cols-2">
+  <div class="!grid grid-cols-1 md:grid-cols-2">
     {% for block in section.blocks %}
       <a
         href="{{ block.settings.link }}"
@@ -55,6 +55,7 @@
         </div>
       </a>
     {% endfor %}
+  </div>
   </div>
 </section>
 

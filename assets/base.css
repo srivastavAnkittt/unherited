@@ -15,7 +15,7 @@
     justify-self: end;
     grid-area: icons;
     padding-right: 13.8rem;
-    
+
 }
 .product-card-wrapper .card,
 .contains-card--product {
@@ -30,6 +30,7 @@
   --image-padding: var(--product-card-image-padding);
   --text-alignment: var(--product-card-text-alignment);
 }
+
 
 .collection-card-wrapper .card,
 .contains-card--collection {

@@ -19,6 +19,7 @@
     },
     "inner_circle_cawkDw": {
       "type": "inner-circle",
+      "disabled": true,
       "name": "Inner Circle",
       "settings": {
         "Inner": "shopify://shop_images/ChatGPT_Image_Feb_21_2026_12_34_04_PM.png",
@@ -28,6 +29,7 @@
     },
     "join_our_tribe_jmgUC6": {
       "type": "join-our-tribe",
+      "disabled": true,
       "name": "Join Our Tribe",
       "settings": {
         "join": "Become Part of the Story",
@@ -37,6 +39,7 @@
     },
     "founder_note_WxeUaa": {
       "type": "founder-note",
+      "disabled": true,
       "name": "Founder Note",
       "settings": {
         "founder_image": "shopify://shop_images/5E2E3096-D0A4-4486-9F16-8276FCFEE2AA_4_5005_c_1.png",
@@ -186,10 +189,119 @@
         "slide_zmLMCa",
         "slide_cgwBUb"
       ],
+      "disabled": true,
       "name": "Tribe Voices",
       "settings": {
         "tribe_heading": "Voice Of Our Tribe",
         "tribe_message": "real Stories. real love."
+      }
+    },
+    "unherited_hero_4QhBwE": {
+      "type": "unherited-hero",
+      "name": "Unherited Hero",
+      "settings": {
+        "brand_red": "#8f0000",
+        "desktop_image": "shopify://shop_images/Tribe_banner.png",
+        "mobile_image": "shopify://shop_images/Slide_16_9_-_21.png",
+        "hero_height_desktop": 700,
+        "hero_height_mobile": 560,
+        "heading": "",
+        "subheading": "",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
+    "unherited_community_xNmix8": {
+      "type": "unherited-community",
+      "blocks": {
+        "review_card_mCTEqY": {
+          "type": "review_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Group_125.png",
+            "alt_text": "Customer review"
+          }
+        },
+        "review_card_pyd9Eq": {
+          "type": "review_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Rectangle_1280.png",
+            "alt_text": "Customer review"
+          }
+        },
+        "review_card_cgRN8g": {
+          "type": "review_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Rectangle_1282.png",
+            "alt_text": "Customer review"
+          }
+        },
+        "review_card_EyYcYz": {
+          "type": "review_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Rectangle_1279.png",
+            "alt_text": "Customer review"
+          }
+        },
+        "review_card_zpBgjh": {
+          "type": "review_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Group_125.png",
+            "alt_text": "Customer review"
+          }
+        },
+        "review_card_xdfL7e": {
+          "type": "review_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Group_127.png",
+            "alt_text": "Customer review"
+          }
+        }
+      },
+      "block_order": [
+        "review_card_mCTEqY",
+        "review_card_pyd9Eq",
+        "review_card_cgRN8g",
+        "review_card_EyYcYz",
+        "review_card_zpBgjh",
+        "review_card_xdfL7e"
+      ],
+      "name": "Community Reviews",
+      "settings": {
+        "bg_color": "#F1EDE4",
+        "border_color": "#7A1F1F",
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 60,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "heading": "Straight From The Community!",
+        "heading_color": "#7A1F1F",
+        "heading_size_desktop": 48,
+        "heading_size_mobile": 28,
+        "description": "From first sprays to daily signatures, here's what the Tribe has been saying.",
+        "description_color": "#333333",
+        "description_size_desktop": 16,
+        "description_size_mobile": 14,
+        "card_radius": 12,
+        "card_gap_desktop": 20,
+        "card_gap_mobile": 12,
+        "desktop_columns": "3",
+        "mobile_layout": "scroll",
+        "max_width": 1400
+      }
+    },
+    "unherited_hero_tUing4": {
+      "type": "unherited-hero",
+      "name": "Unherited Hero",
+      "settings": {
+        "brand_red": "#8f0000",
+        "desktop_image": "shopify://shop_images/Rectangle_1283_eca86dbc-f847-4d94-bfdf-890e0c5c88c6.png",
+        "mobile_image": "shopify://shop_images/Rectangle_1284.png",
+        "hero_height_desktop": 700,
+        "hero_height_mobile": 560,
+        "heading": "",
+        "subheading": "",
+        "button_text": "",
+        "button_link": ""
       }
     }
   },
@@ -198,6 +310,9 @@
     "inner_circle_cawkDw",
     "join_our_tribe_jmgUC6",
     "founder_note_WxeUaa",
-    "voice_of_tribe_rqtxfR"
+    "voice_of_tribe_rqtxfR",
+    "unherited_hero_4QhBwE",
+    "unherited_community_xNmix8",
+    "unherited_hero_tUing4"
   ]
 }

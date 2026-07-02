@@ -1,4 +1,4 @@
-<section id="unherited-best-seller-{{ section.id }}" class="bg-[var(--section-bg)] px-[20px] md:px-[40px] py-[52px] md:py-[90px]">
+<section id="unherited-best-seller-{{ section.id }}" class="bg-[var(--section-bg)]">
   <style>
     #unherited-best-seller-{{ section.id }} {
       --section-bg: {{ section.settings.bg_color }};
@@ -11,8 +11,9 @@
   </style>
 
   {% assign selected_product = section.settings.product %}
+<div class="page-width">
 
-  <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.1fr_1fr] place-content-center items-center gap-[34px] md:gap-[50px]">
+  <div class="grid grid-cols-1 md:grid-cols-[1fr_1.1fr_1fr] place-content-center items-center justify-between gap-[34px] md:gap-[50px]">
     <div>
       {% if section.settings.heading != blank %}
         <h2 class="serif-font text-[44px] leading-[39px] md:text-[66px] md:leading-[58px] text-[var(--brand-red)]">
@@ -94,6 +95,7 @@
         </a>
       {% endif %}
     </div>
+  </div>
   </div>
 </section>
 
