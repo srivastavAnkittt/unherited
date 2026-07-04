@@ -1,0 +1,210 @@
+<style>@font-face {
+	font-family: 'NickySans';
+	src: url('{{ "NickySans-Light.woff2" | asset_url }}') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NickySans';
+	src: url('{{ "NickySans-Regular.woff2" | asset_url }}') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NickySans';
+	src: url('{{ "NickySans-Medium.woff2" | asset_url }}') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NickySans';
+	src: url('{{ "NickySans-SemiBold.woff2" | asset_url }}') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NickySans';
+	src: url('{{ "NickySans-Bold.woff2" | asset_url }}') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NickySans';
+	src: url('{{ "NickySans-Black.woff2" | asset_url }}') format('woff2');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Vinila Condensed Test';
+	src: url('{{"VinilaCondensed-BoldOblique.woff2" | asset_url}}') format('woff2'),
+	url('{{"VinilaCondensed-BoldOblique.woff" | asset_url}}') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Vinila Condensed Test';
+	src: url('{{"VinilaCondensed-BlackOblique.woff2" | asset_url }}') format('woff2'),
+	url('{{"VinilaCondensed-BlackOblique.woff" | asset_url}}') format('woff');
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Vinila Condensed Test';
+	src: url('{{"VinilaCondensed-Oblique.woff2" | asset_url}}') format('woff2'),
+	url('{{"VinilaCondensed-Oblique.woff" | asset_url}}') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Vinila Condensed Test';
+	src: url('{{ "VinilaCondensed-Regular.woff2" | asset_url }}') format('woff2'),
+	url('{{ "VinilaCondensed-Regular.woff" | asset_url }}') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Vinila Condensed Test';
+	src: url('{{ "VinilaCondensed-Black.woff2" | asset_url }}') format('woff2'),
+	url('{{ "VinilaCondensed-Black.woff" | asset_url }}') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Vinila Condensed Test';
+	src: url('{{ "VinilaCondensed-Bold.woff2" | asset_url }}') format('woff2'),
+	url('{{ "VinilaCondensed-Bold.woff2" | asset_url }}') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h0,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: 'Vinila Condensed Test' !important;
+}
+
+body,
+p,
+span,
+a,
+button,
+input,
+textarea,
+select,
+label,
+li,
+ul,
+ol {
+	font-family: 'Elza' !important;
+}
+
+.commom-heading {
+	font-size: 24px;
+	line-height: normal;
+	color: #000;
+	text-align: left;
+	font-weight: 700;
+	white-space: nowrap;
+	margin: 0;
+  letter-spacing: normal;
+}
+.all-heading-align{
+	margin-bottom: 24px;
+}
+{% comment %} Featured collection css slider {% endcomment %}
+ 
+.carousel-section-title-wrapper{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+
+{% comment %} Featured collection css slider {% endcomment %}
+
+
+
+
+   .custom-container{
+    padding: 0 30px 0 30px;
+  }
+
+  @media(min-width:425px){
+    .custom-container{
+      padding: 0 14px 0 14px;
+    }
+  }
+  @media(min-width:768px){
+    .custom-container{
+      padding: 0 14px 0 14px;
+    }
+	.commom-heading {
+		font-size: 32px;
+	}
+  }
+
+  @media(min-width:1024px){
+    .custom-container{
+       padding: 0 34px 0 34px;
+    }
+  }
+
+  @media(min-width:1280px){
+    .custom-container{
+       padding: 0 50px 0 60px;
+    }
+  }
+
+  @media(min-width:1400px){
+    .custom-container{
+      padding: 0 50px 0 90px;
+    }
+  }
+
+  @media(min-width:1600px){
+    .custom-container{
+      padding: 0 100px 0 115px;
+    }
+  }
+
+{% comment %} @media screen and (max-width: 768px) {
+	
+} {% endcomment %}
+:root {
+	--font-heading-family: 'Vinila Condensed Test';
+	--font-body-family: 'Elza';
+}
+</style>
