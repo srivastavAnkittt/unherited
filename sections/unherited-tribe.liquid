@@ -1,7 +1,23 @@
-<section id="unherited-tribe-{{ section.id }}" class="relative overflow-hidden text-white">
+{% style %}
+  .section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+  }
+
+@media screen and (max-width: 749px) {
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+
+<section id="unherited-tribe-{{ section.id }}" class="relative overflow-hidden text-white section-{{ section.id }}">
   <style>
     #unherited-tribe-{{ section.id }} {
       --brand-red: {{ section.settings.brand_red }};
+      background-color: {{ section.settings.brand_red }};
       --dark-color: {{ section.settings.dark_color }};
 
       {% if section.settings.bottom_image != blank %}
@@ -43,13 +59,13 @@
   <div class="tribe-bg relative flex justify-center text-center px-[20px] pt-[58px] md:pt-[58px]">
     <div class="relative z-[2]">
       {% if section.settings.heading != blank %}
-        <h2 class="serif-font text-[38px] leading-[38px] md:text-[44px] md:leading-[48px]">
+        <h2 class="serif-font !text-[60px] md:!text-[96px] !text-[#EDEBDE] !leading-[1] md:!leading-[1]">
           {{ section.settings.heading }}
         </h2>
       {% endif %}
 
       {% if section.settings.subheading != blank %}
-        <p class="mt-[12px] text-[11px] md:text-[12px] tracking-[0.5px] text-white/80">
+        <p class="mt-[12px] !text-[16px] md:!text-[24px] tracking-[0.5px] text-white/80">
           {{ section.settings.subheading }}
         </p>
       {% endif %}
@@ -57,7 +73,7 @@
       {% if section.settings.button_text != blank %}
         <a
           href="{{ section.settings.button_link }}"
-          class="inline-flex mt-[16px] px-[18px] py-[7px] bg-[var(--dark-color)] text-white text-[10px] md:text-[11px] uppercase tracking-[0.8px]"
+          class="rounded-[8px] inline-flex mt-[16px] px-[18px] py-[7px] bg-[var(--dark-color)] text-[#810100] text-[10px] md:text-[11px] uppercase tracking-[0.8px]"
         >
           {{ section.settings.button_text }}
         </a>
@@ -114,6 +130,56 @@
       "type": "image_picker",
       "id": "bottom_image_mobile",
       "label": "Mobile background image"
+    },
+     
+    {
+      "type": "header",
+      "content": "Desktop spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top padding desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom padding desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 48,
+      "unit": "px"
+    },
+
+    {
+      "type": "header",
+      "content": "Mobile spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 28,
+      "unit": "px"
     }
   ],
   "presets": [

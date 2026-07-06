@@ -1,4 +1,19 @@
-<section id="unherited-best-seller-{{ section.id }}" class="bg-[var(--section-bg)]">
+{% style %}
+  .section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+  }
+
+@media screen and (max-width: 749px) {
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+
+<section id="unherited-best-seller-{{ section.id }}" class="bg-[var(--section-bg)] section-{{ section.id }}">
   <style>
     #unherited-best-seller-{{ section.id }} {
       --section-bg: {{ section.settings.bg_color }};
@@ -13,8 +28,8 @@
   {% assign selected_product = section.settings.product %}
 <div class="page-width">
 
-  <div class="grid grid-cols-1 md:grid-cols-[1fr_1.1fr_1fr] place-content-center items-center justify-between gap-[34px] md:gap-[50px]">
-    <div class="m-auto text-center md:text-left">
+  <div class="grid grid-cols-1 justify-center md:justify-between  md:grid-cols-[1fr_1.1fr_1fr] place-content-center items-center justify-between gap-[34px] md:gap-[50px]">
+    <div class="text-center md:text-left">
       {% if section.settings.heading != blank %}
         <div class="serif-font text-[44px] leading-[39px] md:text-[66px] md:leading-[58px] text-[var(--brand-red)]">
           {{ section.settings.heading }}
@@ -69,7 +84,7 @@
       {% endif %}
     </div>
 
-    <div class="md:pt-[40px]">
+    <div class="md:pt-[40px] text-center md:text-left">
       {% if section.settings.meta_text != blank %}
         <p class="mb-[50px] md:mb-[90px] text-[13px] md:text-[15px] text-black">
           {{ section.settings.meta_text }}
@@ -158,6 +173,56 @@
       "type": "url",
       "id": "button_link",
       "label": "Button link override"
+    },
+    
+    {
+      "type": "header",
+      "content": "Desktop spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top padding desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom padding desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 48,
+      "unit": "px"
+    },
+
+    {
+      "type": "header",
+      "content": "Mobile spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 28,
+      "unit": "px"
     }
   ],
   "presets": [

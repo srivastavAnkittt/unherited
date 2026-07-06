@@ -171,8 +171,12 @@
       "name": "Unherited Collection",
       "settings": {
         "bg_color": "#f3f0e5",
-        "brand_red": "#8f0000",
-        "heading": "Collection"
+        "brand_red": "#1b1716",
+        "heading": "Collection",
+        "padding_top_desktop": 32,
+        "padding_bottom_desktop": 48,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 28
       }
     },
     "unherited_best_seller_dKqdCK": {
@@ -188,21 +192,29 @@
         "meta_text": "Unisex | Amber Oud | 30% Extrait de Parfum",
         "description": "Artist crafts bold richness with a warm amber oud character. A refined signature made to stay memorable.",
         "button_text": "Buy Now",
-        "button_link": ""
+        "button_link": "shopify://products/unisex-amber-oud-30-extrait-de-parfum",
+        "padding_top_desktop": 32,
+        "padding_bottom_desktop": 32,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
       }
     },
     "unherited_tribe_GCNdwC": {
       "type": "unherited-tribe",
       "name": "Unherited Tribe",
       "settings": {
-        "brand_red": "#8f0000",
+        "brand_red": "#edebde",
         "dark_color": "#111111",
-        "heading": "The Tribe Speaks",
+        "heading": "The <i>Tribe </i>Speaks",
         "subheading": "From Every Corner of India",
         "button_text": "Join Tribe",
         "button_link": "",
         "bottom_image": "shopify://shop_images/Frame_2112.png",
-        "bottom_image_mobile": "shopify://shop_images/Rectangle_1283.png"
+        "bottom_image_mobile": "shopify://shop_images/Rectangle_1283.png",
+        "padding_top_desktop": 32,
+        "padding_bottom_desktop": 48,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 28
       }
     },
     "unherited_founder_video_qUtCfr": {
@@ -731,6 +743,7 @@
       ],
       "name": "FAQs",
       "settings": {
+        "bg": "#EDEBDE",
         "faq_heading": "Frequently Asked Questions",
         "faq_message": "",
         "padding_top": 36,

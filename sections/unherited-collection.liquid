@@ -1,4 +1,19 @@
-<section id="unherited-collection-{{ section.id }}" class="bg-[var(--section-bg)]">
+{% style %}
+  .section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+  }
+
+@media screen and (max-width: 749px) {
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+
+<section id="unherited-collection-{{ section.id }}" class="bg-[var(--section-bg)] section-{{ section.id }}">
   <style>
     #unherited-collection-{{ section.id }} {
       --section-bg: {{ section.settings.bg_color }};
@@ -40,15 +55,15 @@
 
         <div class="absolute inset-0 bg-black/10"></div>
 
-        <div class="absolute left-[28px] bottom-[36px] md:left-[64px] md:bottom-[58px] z-[2] text-white">
+        <div class="absolute left-[28px] bottom-[36px] md:left-[64px] md:bottom-[58px] z-[2]">
           {% if block.settings.title != blank %}
-            <h3 class="serif-font text-[34px] leading-[30px] md:text-[48px] md:leading-[43px]">
+            <h3 class="max-w-[115px] serif-font text-[26px] leading-[30px] md:text-[48px] md:leading-[43px] !text-[#EDEBDE]">
               {{ block.settings.title }}
             </h3>
           {% endif %}
 
           {% if block.settings.button_text != blank %}
-            <span class="inline-flex mt-[16px] px-[16px] py-[8px] bg-[var(--brand-red)] text-white text-[12px] uppercase tracking-[0.8px]">
+            <span class=" inline-flex rounded-[8px] mt-[16px] px-[16px] py-[8px] bg-[var(--brand-red)] text-[#810100] text-[12px] uppercase tracking-[0.8px]">
               {{ block.settings.button_text }}
             </span>
           {% endif %}
@@ -80,6 +95,56 @@
       "id": "heading",
       "label": "Heading",
       "default": "Collection"
+    },
+     
+    {
+      "type": "header",
+      "content": "Desktop spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top padding desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom padding desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 48,
+      "unit": "px"
+    },
+
+    {
+      "type": "header",
+      "content": "Mobile spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 28,
+      "unit": "px"
     }
   ],
   "blocks": [

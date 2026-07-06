@@ -149,14 +149,14 @@
 
     #unherited-founder-video-{{ section.id }} .mobile-text .founder-title {
       font-size: 33px;
-      line-height: 30px;
+      line-height: 51px;
       display: block;
     }
 
     #unherited-founder-video-{{ section.id }} .caption {
       display: block;
       font-size: 13px;
-      line-height: 16px;
+      line-height: 30px;
       color: rgba(255, 255, 255, 0.75);
     }
 
@@ -250,7 +250,7 @@
 
       <div class="desktop-only desktop-heading">
         {% if section.settings.heading != blank %}
-          <span class="founder-title serif-font">
+          <span class="founder-title serif-font !text-[60px] md:!text-[96px] !leading-1 md:!leading-[1]">
             {{ section.settings.heading }}
           </span>
         {% endif %}
@@ -258,28 +258,28 @@
 
       <div class="desktop-only desktop-founder-name">
         {% if section.settings.caption != blank %}
-          <span class="caption">{{ section.settings.caption }}</span>
+          <span class="caption md:!text-[24px]">{{ section.settings.caption }}</span>
         {% endif %}
 
         {% if section.settings.name != blank %}
-          <span class="name">{{ section.settings.name }}</span>
+          <span class="name md:!text-[24px]">{{ section.settings.name }}</span>
         {% endif %}
       </div>
 
       <div class="mobile-only mobile-text">
         {% if section.settings.heading != blank %}
-          <span class="founder-title serif-font">
+          <span class="founder-title serif-font !text-[60px]">
             {{ section.settings.heading }}
           </span>
         {% endif %}
 
         <div class="mobile-name-wrap">
           {% if section.settings.caption != blank %}
-            <span class="caption">{{ section.settings.caption }}</span>
+            <span class="caption !text-[16px]">{{ section.settings.caption }}</span>
           {% endif %}
 
           {% if section.settings.name != blank %}
-            <span class="name">{{ section.settings.name }}</span>
+            <span class="name !text-[16px]">{{ section.settings.name }}</span>
           {% endif %}
         </div>
       </div>

@@ -11,7 +11,7 @@
     }
   }
 {%- endstyle -%}
-<div class="section-{{ section.id }}-padding">
+<div class="section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg }};">
 <div class="page-width">
   <div class="mx-auto divide-y divide-gray-200">
     {% if section.settings.faq_heading != '' %}
@@ -25,16 +25,21 @@
 
     {% for block in section.blocks %}
       {% if block != null %}
-        <details name="faq" class="group py-4">
-          <summary class="flex justify-between items-center cursor-pointer list-none">
-            <span>{{ block.settings.question }}</span>
-            <span class="transition-transform duration-300 group-open:rotate-45">+</span>
-          </summary>
+       <details name="faq" class="group py-4 px-4 [&[open]]:bg-[#810100]">
+  <summary class="flex justify-between items-center cursor-pointer list-none">
+    <span class="text-black group-open:!text-white">
+      {{ block.settings.question }}
+    </span>
 
-          <div class="pt-2 text-gray-600 text-[14px]">
-            {{ block.settings.answer }}
-          </div>
-        </details>
+    <span class="text-black transition-transform duration-300 group-open:rotate-45 group-open:!text-white">
+      +
+    </span>
+  </summary>
+
+  <div class="pt-2 text-gray-600 text-[14px] group-open:!text-white">
+    {{ block.settings.answer }}
+  </div>
+</details>
       {% endif %}
     {% endfor %}
   </div>
@@ -47,6 +52,11 @@
   "tag": "section",
   "class": "section",
   "settings": [
+     {
+      "type": "color",
+      "id": "bg",
+      "label": "FAQs Background"
+    },
     {
       "type": "text",
       "id": "faq_heading",

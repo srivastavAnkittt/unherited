@@ -40,7 +40,7 @@
       <div class="h-[stretch] relative w-full md:w-[32%] flex-shrink-0 text-center md:text-left order-1">
         {%- if section.settings.heading11 != blank -%}
           <div
-            class="font-serif leading-tight community-reviews-heading-{{ sec_id }}"
+            class="font-serif leading-tight community-reviews-heading-{{ sec_id }} !leading-[.8]"
             style="color: var(--cr-heading-color); font-size: var(--cr-heading-size-m);"
           >
             {{ section.settings.heading11 }}
@@ -163,10 +163,7 @@
       padding-bottom: var(--cr-pad-bottom-d) !important;
     }
     .community-reviews-heading-{{ sec_id }} {
-      font-size: var(--cr-heading-size-d);
-    }
-    .community-reviews-desc-{{ sec_id }} {
-      font-size: var(--cr-desc-size-d);
+      font-size: var(--cr-heading-size-d) !important;
     }
     .community-reviews-grid-{{ sec_id }} {
       display: grid !important;
@@ -202,8 +199,8 @@
     { "type": "header", "content": "Heading" },
     { "type": "richtext", "id": "heading11", "label": "Heading Text aaaa" },
     { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#7A1F1F" },
-    { "type": "range", "id": "heading_size_desktop", "min": 20, "max": 80, "step": 1, "unit": "px", "label": "Heading Font Size (Desktop)", "default": 48 },
-    { "type": "range", "id": "heading_size_mobile", "min": 16, "max": 48, "step": 1, "unit": "px", "label": "Heading Font Size (Mobile)", "default": 28 },
+    { "type": "range", "id": "heading_size_desktop", "min": 20, "max": 120, "step": 1, "unit": "px", "label": "Heading Font Size (Desktop)", "default": 48 },
+    { "type": "range", "id": "heading_size_mobile", "min": 16, "max": 80, "step": 1, "unit": "px", "label": "Heading Font Size (Mobile)", "default": 28 },
 
     { "type": "header", "content": "Description" },
     { "type": "textarea", "id": "description", "label": "Description Text", "default": "From first sprays to daily signatures, here's what the Tribe has been saying." },
