@@ -1,0 +1,415 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<section
+  id="unherited-story-{{ section.id }}"
+  class="w-full overflow-hidden"
+  style="
+    --story-bg: {{ s.bg_color }};
+    --story-text: {{ s.text_color }};
+    --story-heading: {{ s.heading_color }};
+    --story-max-width: {{ s.max_width }}px;
+    --story-padding-top-d: {{ s.padding_top_desktop }}px;
+    --story-padding-bottom-d: {{ s.padding_bottom_desktop }}px;
+    --story-padding-x-d: {{ s.padding_x_desktop }}px;
+    --story-padding-top-m: {{ s.padding_top_mobile }}px;
+    --story-padding-bottom-m: {{ s.padding_bottom_mobile }}px;
+    --story-padding-x-m: {{ s.padding_x_mobile }}px;
+    --story-heading-size-d: {{ s.heading_size_desktop }}px;
+    --story-heading-size-m: {{ s.heading_size_mobile }}px;
+    --story-body-size-d: {{ s.body_size_desktop }}px;
+    --story-body-size-m: {{ s.body_size_mobile }}px;
+    --story-gap-d: {{ s.gap_desktop }}px;
+    --story-gap-m: {{ s.gap_mobile }}px;
+  "
+>
+  <div class="unherited-story-wrapper">
+    <div class="unherited-story-inner">
+      <div class="unherited-story-heading-block">
+        <h2 class="unherited-story-heading">
+          <span class="story-word story-word-own">{{ s.heading_word_1 }}</span>
+          <span class="story-word story-word-your">{{ s.heading_word_2 }}</span>
+          <span class="story-word story-word-story">{{ s.heading_word_3 }}</span>
+        </h2>
+      </div>
+
+      <div class="unherited-story-content">
+        {%- if s.intro_text != blank -%}
+          <div class="unherited-story-text">
+            {{ s.intro_text }}
+          </div>
+        {%- endif -%}
+
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'paragraph' -%}
+              {%- if block.settings.text != blank -%}
+                <div class="unherited-story-text" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </div>
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #unherited-story-{{ section.id }} {
+    background: var(--story-bg, #F1EFE3);
+  }
+
+  #unherited-story-{{ section.id }} * {
+    box-sizing: border-box;
+  }
+
+  #unherited-story-{{ section.id }} .unherited-story-wrapper {
+    width: 100%;
+    background: var(--story-bg, #F1EFE3);
+    padding: var(--story-padding-top-d, 20px) var(--story-padding-x-d, 48px) var(--story-padding-bottom-d, 28px);
+  }
+
+  #unherited-story-{{ section.id }} .unherited-story-inner {
+    max-width: var(--story-max-width, 1180px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 22% 1fr;
+    gap: var(--story-gap-d, 60px);
+    align-items: start;
+  }
+
+  #unherited-story-{{ section.id }} .unherited-story-heading-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  #unherited-story-{{ section.id }} .unherited-story-heading {
+    margin: 0;
+    color: var(--story-heading, #990000);
+    font-size: var(--story-heading-size-d, 66px);
+    line-height: 0.78;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+
+  #unherited-story-{{ section.id }} .story-word {
+    display: block;
+  }
+
+  #unherited-story-{{ section.id }} .story-word-own,
+  #unherited-story-{{ section.id }} .story-word-story {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  #unherited-story-{{ section.id }} .story-word-your {
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  #unherited-story-{{ section.id }} .unherited-story-content {
+    color: var(--story-text, #222222);
+    font-size: var(--story-body-size-d, 13px);
+    line-height: 1.18;
+    font-weight: 400;
+  }
+
+  #unherited-story-{{ section.id }} .unherited-story-text {
+    margin: 0 0 14px;
+  }
+
+  #unherited-story-{{ section.id }} .unherited-story-text:last-child {
+    margin-bottom: 0;
+  }
+
+  #unherited-story-{{ section.id }} .unherited-story-text p {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    #unherited-story-{{ section.id }} .unherited-story-wrapper {
+      padding: var(--story-padding-top-m, 14px) var(--story-padding-x-m, 18px) var(--story-padding-bottom-m, 24px);
+    }
+
+    #unherited-story-{{ section.id }} .unherited-story-inner {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--story-gap-m, 18px);
+    }
+
+    #unherited-story-{{ section.id }} .unherited-story-heading-block {
+      width: 100%;
+      justify-content: center;
+    }
+
+    #unherited-story-{{ section.id }} .unherited-story-heading {
+      font-size: var(--story-heading-size-m, 48px);
+      line-height: 0.78;
+      text-align: center;
+      letter-spacing: -1px;
+    }
+
+    #unherited-story-{{ section.id }} .story-word {
+      display: inline;
+    }
+
+    #unherited-story-{{ section.id }} .story-word-own::after,
+    #unherited-story-{{ section.id }} .story-word-your::after {
+      content: " ";
+    }
+
+    #unherited-story-{{ section.id }} .unherited-story-content {
+      font-size: var(--story-body-size-m, 12px);
+      line-height: 1.18;
+      text-align: justify;
+    }
+
+    #unherited-story-{{ section.id }} .unherited-story-text {
+      margin-bottom: 12px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Unherited Own Story",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading Text"
+    },
+    {
+      "type": "text",
+      "id": "heading_word_1",
+      "label": "Heading Word 1",
+      "default": "Own"
+    },
+    {
+      "type": "text",
+      "id": "heading_word_2",
+      "label": "Heading Word 2",
+      "default": "Your"
+    },
+    {
+      "type": "text",
+      "id": "heading_word_3",
+      "label": "Heading Word 3",
+      "default": "Story."
+    },
+    {
+      "type": "header",
+      "content": "Main Text"
+    },
+    {
+      "type": "richtext",
+      "id": "intro_text",
+      "label": "First Paragraph",
+      "default": "<p>Unherited was born from a simple but powerful belief: your scent should feel as original as your journey. In a fragrance market crowded with cheap imitation perfumes on one side and overpriced international luxury brands on the other, we saw a missing link — aspirational Indian consumers who value quality, honesty, and meaning. People who don't just wear a fragrance, but identify with it.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F1EFE3"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#990000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#222222"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Max Width",
+      "min": 900,
+      "max": 1600,
+      "step": 20,
+      "unit": "px",
+      "default": 1180
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Heading Size Desktop",
+      "min": 40,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 66
+    },
+    {
+      "type": "range",
+      "id": "body_size_desktop",
+      "label": "Body Text Size Desktop",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "label": "Desktop Gap",
+      "min": 20,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Padding Top Desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Padding Bottom Desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_x_desktop",
+      "label": "Padding Left Right Desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading Size Mobile",
+      "min": 28,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "body_size_mobile",
+      "label": "Body Text Size Mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "label": "Mobile Gap",
+      "min": 8,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding Top Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding Bottom Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_x_mobile",
+      "label": "Padding Left Right Mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Paragraph Text",
+          "default": "<p>Unherited is built for those who write their own story. Quietly, boldly, unapologetically. Every fragrance we create is crafted with intent, originality, and performance at its core. We use high-quality fragrance ingredients and high perfume oil concentrations to ensure strong sillage, long-lasting performance, and a signature scent that stays with you long after the first spray.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Unherited Own Story",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Unherited is built for those who write their own story. Quietly, boldly, unapologetically. Every fragrance we create is crafted with intent, originality, and performance at its core. We use high-quality fragrance ingredients and high perfume oil concentrations to ensure strong sillage, long-lasting performance, and a signature scent that stays with you long after the first spray.<br>But Unherited is more than a perfume brand.</p>"
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>It's about trust over tricks, consistency over discounts, and experience over excess. From uniform pricing across all platforms to thoughtful packaging and genuine customer care, every touchpoint is designed to make you feel seen, valued, and proud to be part of the journey. We are a proudly Indian fragrance brand, rooted in our culture, global in our ambition, and deeply personal in everything we do.</p>"
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>This is Unherited. A premium Indian perfume brand for those who own their story.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

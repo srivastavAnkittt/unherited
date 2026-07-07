@@ -11,13 +11,82 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "unherited_hero_ymHemC": {
+      "type": "unherited-hero",
+      "name": "Unherited Hero",
+      "settings": {
+        "brand_red": "#8f0000",
+        "desktop_image": "shopify://shop_images/Slide_16_9_-_21_8dbdb6a0-a74f-4266-9961-4ec675eb7e0f.png",
+        "mobile_image": "shopify://shop_images/Slide_16_9_-_20.png",
+        "hero_height_desktop": 560,
+        "hero_height_mobile": 260,
+        "heading": "",
+        "subheading": "",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
+    "unherited_own_story_HNjX4M": {
+      "type": "unherited-own-story",
+      "blocks": {
+        "paragraph_XNLixW": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Unherited is built for those who write their own story. Quietly, boldly, unapologetically. Every fragrance we create is crafted with intent, originality, and performance at its core. We use high-quality fragrance ingredients and high perfume oil concentrations to ensure strong sillage, long-lasting performance, and a signature scent that stays with you long after the first spray.<br>But Unherited is more than a perfume brand.</p>"
+          }
+        },
+        "paragraph_e9jbi4": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>It's about trust over tricks, consistency over discounts, and experience over excess. From uniform pricing across all platforms to thoughtful packaging and genuine customer care, every touchpoint is designed to make you feel seen, valued, and proud to be part of the journey. We are a proudly Indian fragrance brand, rooted in our culture, global in our ambition, and deeply personal in everything we do.</p>"
+          }
+        },
+        "paragraph_qeryj7": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>This is Unherited. A premium Indian perfume brand for those who own their story.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_XNLixW",
+        "paragraph_e9jbi4",
+        "paragraph_qeryj7"
+      ],
+      "name": "Unherited Own Story",
+      "settings": {
+        "heading_word_1": "Own",
+        "heading_word_2": "Your",
+        "heading_word_3": "Story.",
+        "intro_text": "<p>Unherited was born from a simple but powerful belief: your scent should feel as original as your journey. In a fragrance market crowded with cheap imitation perfumes on one side and overpriced international luxury brands on the other, we saw a missing link — aspirational Indian consumers who value quality, honesty, and meaning. People who don't just wear a fragrance, but identify with it.</p>",
+        "bg_color": "#f1efe3",
+        "heading_color": "#990000",
+        "text_color": "#222222",
+        "max_width": 1180,
+        "heading_size_desktop": 96,
+        "body_size_desktop": 18,
+        "gap_desktop": 60,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 28,
+        "padding_x_desktop": 48,
+        "heading_size_mobile": 60,
+        "body_size_mobile": 16,
+        "gap_mobile": 18,
+        "padding_top_mobile": 14,
+        "padding_bottom_mobile": 24,
+        "padding_x_mobile": 18
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "unherited_hero_ymHemC",
+    "unherited_own_story_HNjX4M"
   ]
 }

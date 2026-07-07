@@ -2832,6 +2832,10 @@ details[open] > .header__submenu {
   color: rgba(var(--color-foreground), 0.75);
 }
 
+/* .pdp-css{
+  color:black;
+} */
+
 .header__menu-item:hover {
   color: rgb(var(--color-foreground));
 }
@@ -2968,7 +2972,8 @@ details-disclosure > details {
 
 .gradient {
   background: rgb(var(--color-background));
-  background: var(--gradient-background);
+  /* background: var(--gradient-background); */
+  background: #EDEBDE;
   background-attachment: fixed;
 }
 
