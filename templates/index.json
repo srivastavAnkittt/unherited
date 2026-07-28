@@ -224,8 +224,8 @@
         "brand_red": "#8f0000",
         "desktop_banner": "shopify://shop_images/Group_143.png",
         "mobile_banner": "shopify://shop_images/Frame_2111.png",
-        "desktop_video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.04.59 (2).mp4",
-        "mobile_video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
+        "desktop_video": "shopify://files/videos/website video.mp4",
+        "mobile_video": "shopify://files/videos/website video.mp4",
         "heading": "<p>Unwrap<br/><em>Unherited</em></p>",
         "caption": "With Founder",
         "name": "Vishwajeet Singh"
@@ -743,7 +743,7 @@
       ],
       "name": "FAQs",
       "settings": {
-        "bg": "#EDEBDE",
+        "bg": "#edebde",
         "faq_heading": "Frequently Asked Questions",
         "faq_message": "",
         "padding_top": 36,
