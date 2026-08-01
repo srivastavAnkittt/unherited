@@ -75,11 +75,10 @@
         "slide_rawRe6",
         "slide_3Dfg73"
       ],
-      "disabled": true,
       "name": "Gallery Banner",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "adapt_image",
+        "slide_height": "large",
         "slider_visual": "none",
         "auto_rotate": true,
         "change_slides_speed": 3,
