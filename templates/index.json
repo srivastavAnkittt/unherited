@@ -12,25 +12,6 @@
     "gallery_banner_4im6k8": {
       "type": "gallery-banner",
       "blocks": {
-        "slide_rkWacK": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Slide_2_-_1920x1228_41e94107-7404-433f-9f90-42609fb8a79a.png",
-            "mobile": "shopify://shop_images/Group_140.png",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify://products/for-men-leathery-spicy-30-extrait-de-parfum",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        },
         "slide_rawRe6": {
           "type": "slide",
           "settings": {
@@ -68,12 +49,31 @@
             "text_alignment_mobile": "center",
             "color_scheme": ""
           }
+        },
+        "slide_rkWacK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Slide_2_-_1920x1228_41e94107-7404-433f-9f90-42609fb8a79a.png",
+            "mobile": "shopify://shop_images/Group_140.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://products/for-men-leathery-spicy-30-extrait-de-parfum",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
         }
       },
       "block_order": [
-        "slide_rkWacK",
         "slide_rawRe6",
-        "slide_3Dfg73"
+        "slide_3Dfg73",
+        "slide_rkWacK"
       ],
       "name": "Gallery Banner",
       "settings": {
