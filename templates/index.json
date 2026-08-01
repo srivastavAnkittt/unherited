@@ -15,14 +15,14 @@
         "slide_rkWacK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DESKTOP_VARIANT_-_1.png",
-            "mobile": "shopify://shop_images/MOBILE_VARIANT_-_1.png",
+            "image": "shopify://shop_images/Slide_2_-_1920x1228_41e94107-7404-433f-9f90-42609fb8a79a.png",
+            "mobile": "shopify://shop_images/Group_140.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "shopify://collections/men",
+            "link": "shopify://products/for-men-leathery-spicy-30-extrait-de-parfum",
             "button_style_secondary": false,
             "show_text_box": false,
             "box_align": "middle-center",
@@ -34,14 +34,14 @@
         "slide_rawRe6": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DESKTOP_VARIANT_-_3.png",
-            "mobile": "shopify://shop_images/MOBILE_VARIANT_-_3.png",
+            "image": "shopify://shop_images/Slide_3_-_1920x1228_1f5bab70-4e02-4f2c-9ecd-d7125abfe513.png",
+            "mobile": "shopify://shop_images/Group_141_8244a099-a435-400d-93c4-2534d99383c4.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "shopify://collections/shop-all",
+            "link": "shopify://products/for-women-fruity-gourmand-22-extrait-de-parfum",
             "button_style_secondary": false,
             "show_text_box": false,
             "box_align": "middle-center",
@@ -53,14 +53,14 @@
         "slide_3Dfg73": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DESKTOP_VARIANT_-_2.png",
-            "mobile": "shopify://shop_images/MOBILE_VARIANT_-_2.png",
+            "image": "shopify://shop_images/Slide_1_-_1920x1228_991fdad8-77eb-4b26-945d-17a15f00512d.png",
+            "mobile": "shopify://shop_images/Group_139.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "shopify://collections/women",
+            "link": "shopify://products/unisex-amber-oud-30-extrait-de-parfum",
             "button_style_secondary": false,
             "show_text_box": false,
             "box_align": "middle-center",
@@ -90,6 +90,7 @@
     },
     "unherited_hero_yLNYEx": {
       "type": "unherited-hero",
+      "disabled": true,
       "name": "Unherited Hero",
       "settings": {
         "brand_red": "#8f0000",
