@@ -205,10 +205,10 @@
       "settings": {
         "brand_red": "#edebde",
         "dark_color": "#111111",
-        "heading": "The <i>Tribe </i>Speaks",
+        "heading": "The Tribe Speaks",
         "subheading": "From Every Corner of India",
         "button_text": "Join Tribe",
-        "button_link": "",
+        "button_link": "shopify://pages/tribe",
         "bottom_image": "shopify://shop_images/Frame_2112.png",
         "bottom_image_mobile": "shopify://shop_images/Rectangle_1283.png",
         "padding_top_desktop": 32,
