@@ -444,6 +444,9 @@ table:not([class]) th {
   .small-hide {
     display: none !important;
   }
+  .custom-tribe{
+    font-size: 50px !important;
+  }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
