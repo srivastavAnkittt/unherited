@@ -151,7 +151,7 @@
             "image": "shopify://shop_images/him.png",
             "title": "Fragrance for Him",
             "button_text": "Explore",
-            "link": "shopify://products/for-men-aquatic-citrus-30-extrait-de-parfum"
+            "link": "shopify://collections/men"
           }
         },
         "collection_card_m3KCYa": {
@@ -160,7 +160,7 @@
             "image": "shopify://shop_images/her.png",
             "title": "Fragrance for Her",
             "button_text": "Explore",
-            "link": "shopify://products/for-women-fruity-gourmand-22-extrait-de-parfum"
+            "link": "shopify://collections/women"
           }
         }
       },
