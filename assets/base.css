@@ -444,6 +444,9 @@ table:not([class]) th {
   .small-hide {
     display: none !important;
   }
+  .custom-tribe{
+    font-size: 50px !important;
+  }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
@@ -2969,11 +2972,17 @@ details-disclosure > details {
   color: rgb(var(--color-badge-foreground));
   word-break: break-word;
 }
+span.header__active-menu-item {
+    color: #810100;
+}
+/* .header--mobile-center{
+  background-color: red;
+} */
 
 .gradient {
-  background: rgb(var(--color-background));
-  /* background: var(--gradient-background); */
-  background: #EDEBDE;
+  /* background: rgb(var(--color-background)); */
+  background: var(--gradient-background);
+  /* background: #EDEBDE; */
   background-attachment: fixed;
 }
 

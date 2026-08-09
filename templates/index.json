@@ -12,36 +12,17 @@
     "gallery_banner_4im6k8": {
       "type": "gallery-banner",
       "blocks": {
-        "slide_rkWacK": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/DESKTOP_VARIANT_-_1.png",
-            "mobile": "shopify://shop_images/MOBILE_VARIANT_-_1.png",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify://collections/men",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        },
         "slide_rawRe6": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DESKTOP_VARIANT_-_3.png",
-            "mobile": "shopify://shop_images/MOBILE_VARIANT_-_3.png",
+            "image": "shopify://shop_images/Slide_3_-_1920x1228_1f5bab70-4e02-4f2c-9ecd-d7125abfe513.png",
+            "mobile": "shopify://shop_images/Group_141_8244a099-a435-400d-93c4-2534d99383c4.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "shopify://collections/shop-all",
+            "link": "shopify://products/for-women-fruity-gourmand-22-extrait-de-parfum",
             "button_style_secondary": false,
             "show_text_box": false,
             "box_align": "middle-center",
@@ -53,14 +34,33 @@
         "slide_3Dfg73": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DESKTOP_VARIANT_-_2.png",
-            "mobile": "shopify://shop_images/MOBILE_VARIANT_-_2.png",
+            "image": "shopify://shop_images/Slide_1_-_1920x1228_991fdad8-77eb-4b26-945d-17a15f00512d.png",
+            "mobile": "shopify://shop_images/Group_139.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "shopify://collections/women",
+            "link": "shopify://products/unisex-amber-oud-30-extrait-de-parfum",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_rkWacK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Slide_2_-_1920x1228_41e94107-7404-433f-9f90-42609fb8a79a.png",
+            "mobile": "shopify://shop_images/Group_140.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://products/for-men-leathery-spicy-30-extrait-de-parfum",
             "button_style_secondary": false,
             "show_text_box": false,
             "box_align": "middle-center",
@@ -71,16 +71,15 @@
         }
       },
       "block_order": [
-        "slide_rkWacK",
         "slide_rawRe6",
-        "slide_3Dfg73"
+        "slide_3Dfg73",
+        "slide_rkWacK"
       ],
-      "disabled": true,
       "name": "Gallery Banner",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "none",
+        "slide_height": "large",
+        "slider_visual": "dots",
         "auto_rotate": true,
         "change_slides_speed": 3,
         "image_behavior": "none",
@@ -91,6 +90,7 @@
     },
     "unherited_hero_yLNYEx": {
       "type": "unherited-hero",
+      "disabled": true,
       "name": "Unherited Hero",
       "settings": {
         "brand_red": "#8f0000",
@@ -151,7 +151,7 @@
             "image": "shopify://shop_images/him.png",
             "title": "Fragrance for Him",
             "button_text": "Explore",
-            "link": "shopify://products/for-men-aquatic-citrus-30-extrait-de-parfum"
+            "link": "shopify://collections/men"
           }
         },
         "collection_card_m3KCYa": {
@@ -160,7 +160,7 @@
             "image": "shopify://shop_images/her.png",
             "title": "Fragrance for Her",
             "button_text": "Explore",
-            "link": "shopify://products/for-women-fruity-gourmand-22-extrait-de-parfum"
+            "link": "shopify://collections/women"
           }
         }
       },
@@ -174,9 +174,9 @@
         "brand_red": "#1b1716",
         "heading": "Collection",
         "padding_top_desktop": 32,
-        "padding_bottom_desktop": 48,
+        "padding_bottom_desktop": 0,
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 28
+        "padding_bottom_mobile": 0
       }
     },
     "unherited_best_seller_dKqdCK": {
@@ -187,16 +187,19 @@
         "brand_red": "#8f0000",
         "product": "",
         "heading": "<p><em>Our</em> <strong>Best</strong></p><p><strong> Seller</strong></p><p></p><p>-</p><p><br/><em>Artist </em></p>",
+        "i-heading": "Our",
+        "b-heading": "Best Seller",
+        "a-heading": "Artist",
         "product_title": "",
-        "product_image": "shopify://shop_images/ChatGPT_Image_Jun_18_2026_10_25_28_PM.png",
+        "product_image": "shopify://shop_images/Artist_4_1_1.png",
         "meta_text": "Unisex | Amber Oud | 30% Extrait de Parfum",
         "description": "Artist crafts bold richness with a warm amber oud character. A refined signature made to stay memorable.",
         "button_text": "Buy Now",
         "button_link": "shopify://products/unisex-amber-oud-30-extrait-de-parfum",
-        "padding_top_desktop": 32,
-        "padding_bottom_desktop": 32,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "padding_top_desktop": 160,
+        "padding_bottom_desktop": 112,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 60
       }
     },
     "unherited_tribe_GCNdwC": {
@@ -205,16 +208,16 @@
       "settings": {
         "brand_red": "#edebde",
         "dark_color": "#111111",
-        "heading": "The <i>Tribe </i>Speaks",
+        "heading": "The Tribe Speaks",
         "subheading": "From Every Corner of India",
         "button_text": "Join Tribe",
-        "button_link": "",
+        "button_link": "shopify://pages/tribe",
         "bottom_image": "shopify://shop_images/Frame_2112.png",
         "bottom_image_mobile": "shopify://shop_images/Rectangle_1283.png",
-        "padding_top_desktop": 32,
-        "padding_bottom_desktop": 48,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 28
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "unherited_founder_video_qUtCfr": {
@@ -224,8 +227,8 @@
         "brand_red": "#8f0000",
         "desktop_banner": "shopify://shop_images/Group_143.png",
         "mobile_banner": "shopify://shop_images/Frame_2111.png",
-        "desktop_video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.04.59 (2).mp4",
-        "mobile_video": "shopify://files/videos/WhatsApp Video 2025-09-24 at 11.02.28 (1).mp4",
+        "desktop_video": "shopify://files/videos/website video.mp4",
+        "mobile_video": "shopify://files/videos/website video.mp4",
         "heading": "<p>Unwrap<br/><em>Unherited</em></p>",
         "caption": "With Founder",
         "name": "Vishwajeet Singh"
@@ -743,7 +746,7 @@
       ],
       "name": "FAQs",
       "settings": {
-        "bg": "#EDEBDE",
+        "bg": "#edebde",
         "faq_heading": "Frequently Asked Questions",
         "faq_message": "",
         "padding_top": 36,

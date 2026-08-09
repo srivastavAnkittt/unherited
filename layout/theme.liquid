@@ -55,6 +55,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
    {% render 'custom-fonts' %}
+
+   {% if template.name == 'product' %}
+    <style>
+      .header__menu-item,.header__icon,.cart-count-bubble{
+      color: black !important;
+      }
+      .cart-count-bubble{
+      background-color: rgb(202 201 195)!important;
+      }
+    </style>
+    {% endif %}
   {%- if settings.animations_reveal_on_scroll -%}
     <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}

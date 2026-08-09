@@ -23,17 +23,108 @@
     #unherited-best-seller-{{ section.id }} .serif-font {
       font-family: Georgia, "Times New Roman", serif;
     }
+ #shopify-section-{{ section.id }} .best-seller-section {
+    min-height: {{ section.settings.section_height }}px;
+    padding: {{ section.settings.padding_top }}px
+             {{ section.settings.padding_horizontal }}px
+             {{ section.settings.padding_bottom }}px;
+    box-sizing: border-box;
+  }
+
+  #shopify-section-{{ section.id }} .best-seller-title h4{
+    margin: 0;
+    font-size: 96px;
+    line-height: 0.8;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #810100;
+  }
+
+  #shopify-section-{{ section.id }} .best-seller-title h4 {
+    display: block;
+  }
+
+  #shopify-section-{{ section.id }} .best-seller-title em {
+    font-weight: 400;
+  }
+
+  #shopify-section-{{ section.id }} .best-seller-divider {
+    display: block;
+    width: 20px;
+    height: 5px;
+    margin: 40px 0;
+    background: #810100;
+  }
+
+  #shopify-section-{{ section.id }} .best-seller-artist {
+    {% comment %} margin-top: 12px; {% endcomment %}
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: {{ section.settings.artist_size }}px;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  #shopify-section-{{ section.id }} .best-seller-button {
+    display: inline-block;
+    margin-top: {{ section.settings.button_margin_top }}px;
+    padding: 5px 10px;
+    font-size: 11px;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 2px;
+  }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .best-seller-title h4 {
+     font-size: 60px;
+    }
+    #shopify-section-{{ section.id }} .best-seller-divider{
+      margin: 40px auto;
+      display: block;
+    }
+  }
   </style>
 
   {% assign selected_product = section.settings.product %}
 <div class="page-width">
 
-  <div class="grid grid-cols-1 justify-center md:justify-between  md:grid-cols-[1fr_1.1fr_1fr] place-content-center items-center justify-between gap-[34px] md:gap-[50px]">
-    <div class="text-center md:text-left">
+  <div class="grid grid-cols-1 justify-center md:justify-between  md:grid-cols-[1fr_1.1fr_1fr]  justify-between gap-[34px] md:gap-[50px]">
+    <div class="text-center md:text-left relative">
       {% if section.settings.heading != blank %}
-        <div class="serif-font text-[44px] leading-[39px] md:text-[66px] md:leading-[58px] text-[var(--brand-red)]">
-          {{ section.settings.heading }}
-        </div>
+         <div class="serif-font text-[60px] leading-[39px] md:text-[96px] md:leading-[58px] text-[var(--brand-red)]">
+          {% comment %} {{ section.settings.heading }} {% endcomment %}
+           <section
+  class="best-seller-section"
+  style="
+    background: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+  "
+>
+  <div class="best-seller-content">
+
+    <div class="best-seller-title">
+      <h4>
+        <em>{{ section.settings.small_text }}</em>
+        {{ section.settings.bold_text }}
+      </h4>
+
+      <h4>
+        {{ section.settings.second_line }}
+      </h4>
+    </div>
+
+    <span
+      class="best-seller-divider"
+    ></span>
+
+    <div class="best-seller-artist">
+      {{ section.settings.artist_text }}
+    </div>
+
+
+
+  </div>
+</section>
+        </div> 
       {% endif %}
 
       <div class="w-[58px] h-px bg-[var(--brand-red)] my-[22px]"></div>
@@ -55,7 +146,7 @@
 {% if section.settings.button_text != blank %}
   <a
     href="{{ button_url }}"
-    class="!hidden md:!inline-flex mt-[40px] px-[20px] py-[8px] bg-[var(--brand-red)] text-white text-[12px] uppercase tracking-[0.8px]"
+    class="md:absolute md:bottom-[71px] !hidden md:!inline-flex rounded-[8px] px-[20px] py-[8px] bg-[var(--brand-red)] text-white text-[12px] uppercase tracking-[0.8px]"
   >
     {{ section.settings.button_text }}
   </a>
@@ -84,15 +175,15 @@
       {% endif %}
     </div>
 
-    <div class="md:pt-[40px] text-center md:text-left">
+    <div class="text-center md:text-left relative">
       {% if section.settings.meta_text != blank %}
-        <p class="mb-[50px] md:mb-[90px] text-[13px] md:text-[15px] text-black">
+        <p class="text-[20px] md:text-[24px] text-black">
           {{ section.settings.meta_text }}
         </p>
       {% endif %}
 
       {% if section.settings.description != blank %}
-        <p class="max-w-[390px] text-[14px] md:text-[15px] leading-[22px] text-black/70">
+        <p class="max-w-[390px] text-[16px] md:text-[18px] leading-[22px] text-black/70 md:absolute md:bottom-[71px]">
           {{ section.settings.description }}
         </p>
       {% elsif selected_product.description != blank %}
@@ -142,8 +233,26 @@
     },
     {
       "type": "text",
-      "id": "product_title",
-      "label": "Display product title",
+      "id": "small_text",
+      "label": "Italic text",
+      "default": "Our"
+    },
+    {
+      "type": "text",
+      "id": "bold_text",
+      "label": "Bold text",
+      "default": "Best"
+    },
+    {
+      "type": "text",
+      "id": "second_line",
+      "label": "Second line",
+      "default": "Seller"
+    },
+    {
+      "type": "text",
+      "id": "artist_text",
+      "label": "Artist text",
       "default": "Artist"
     },
     {
@@ -184,7 +293,7 @@
       "id": "padding_top_desktop",
       "label": "Top padding desktop",
       "min": 0,
-      "max": 120,
+      "max": 200,
       "step": 4,
       "default": 32,
       "unit": "px"
@@ -194,7 +303,7 @@
       "id": "padding_bottom_desktop",
       "label": "Bottom padding desktop",
       "min": 0,
-      "max": 120,
+      "max": 200,
       "step": 4,
       "default": 48,
       "unit": "px"
@@ -209,7 +318,7 @@
       "id": "padding_top_mobile",
       "label": "Top padding mobile",
       "min": 0,
-      "max": 80,
+      "max": 200,
       "step": 4,
       "default": 20,
       "unit": "px"
@@ -219,7 +328,7 @@
       "id": "padding_bottom_mobile",
       "label": "Bottom padding mobile",
       "min": 0,
-      "max": 80,
+      "max": 200,
       "step": 4,
       "default": 28,
       "unit": "px"

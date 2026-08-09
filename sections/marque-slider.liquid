@@ -8,18 +8,20 @@
   </div>
 </div>
 <style>
-    .partner-logo-slider {
+  .partner-logo-slider {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
   position: relative;
 }
+
 .partner-logo-slide span:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.partner-logo-slider:before {
+
+.partner-logo-slider::before {
   content: "";
   position: absolute;
   top: 0;
@@ -28,7 +30,8 @@
   height: 100%;
   z-index: 9;
 }
-.partner-logo-slider:after {
+
+.partner-logo-slider::after {
   content: "";
   position: absolute;
   top: 0;
@@ -37,28 +40,43 @@
   height: 100%;
   z-index: 9;
 }
+
 .partner-logo-slide {
   display: flex;
   align-items: center;
   gap: 20px;
-  animation: partner-logo 15s linear infinite;
-    padding: 13px 0;
+  width: max-content;
+  padding: 13px 0;
+
+  animation-name: partner-logo;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
-.partner-logo-slide:hover {
+
+.partner-logo-slider:hover .partner-logo-slide {
   animation-play-state: paused;
 }
+
 .partner-logo-slide img {
   width: 150px;
   border: 1px solid #b2b2b2;
   padding: 20px;
   border-radius: 10px;
 }
+
+.marquee-spacer {
+  width: 50vw;
+  flex: 0 0 50vw;
+}
+
 @keyframes partner-logo {
   from {
     transform: translateX(0);
   }
+
   to {
-    transform: translateX(-50%);
+    transform: translateX(var(--marquee-distance));
   }
 }
 
@@ -66,18 +84,20 @@
   .partner-logo-slide {
     gap: 20px;
   }
+
   .partner-logo-slide img {
     height: 45px;
   }
 }
+
 @media only screen and (max-width: 769px) {
   .partner-logo-slide {
-  animation: partner-logo 3s linear infinite;
-}
+    animation-duration: 10s;
+  }
 }
 </style>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+{% comment %} document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelector(".partner-logo-slide");
   const cloneCount = 3;
 
@@ -90,6 +110,49 @@ document.addEventListener("DOMContentLoaded", function () {
       slides.appendChild(child.cloneNode(true));
     });
   }
+}); {% endcomment %}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelector(".partner-logo-slide");
+
+  if (!slides || slides.dataset.init === "true") return;
+
+  slides.dataset.init = "true";
+
+  // Original items
+  const originalItems = Array.from(slides.children);
+
+  // ✅ Last item ke baad half screen space
+  const spacer = document.createElement("div");
+  spacer.classList.add("marquee-spacer");
+  slides.appendChild(spacer);
+
+  // ✅ Original items ko ek baar duplicate karo
+  originalItems.forEach((item) => {
+    slides.appendChild(item.cloneNode(true));
+  });
+
+  // ✅ Second spacer for seamless repeat
+  const spacerClone = spacer.cloneNode(true);
+  slides.appendChild(spacerClone);
+
+  // First complete cycle ki width
+  requestAnimationFrame(() => {
+    let cycleWidth = 0;
+
+    originalItems.forEach((item) => {
+      cycleWidth += item.getBoundingClientRect().width;
+    });
+
+    const gap = 20;
+    cycleWidth += gap * originalItems.length;
+    cycleWidth += window.innerWidth / 2;
+
+    slides.style.setProperty(
+      "--marquee-distance",
+      `-${cycleWidth}px`
+    );
+  });
 });
 </script>
 
