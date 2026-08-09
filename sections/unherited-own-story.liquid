@@ -27,11 +27,11 @@
   <div class="unherited-story-wrapper">
     <div class="unherited-story-inner">
       <div class="unherited-story-heading-block">
-        <h2 class="unherited-story-heading">
-          <span class="story-word story-word-own">{{ s.heading_word_1 }}</span>
-          <span class="story-word story-word-your">{{ s.heading_word_2 }}</span>
-          <span class="story-word story-word-story">{{ s.heading_word_3 }}</span>
-        </h2>
+        <div class="unherited-story-heading">
+          <h4 class="story-word story-word-own">{{ s.heading_word_1 }}</h4>
+          <h4 class="story-word story-word-your">{{ s.heading_word_2 }}</h4>
+          <h4 class="story-word story-word-story">{{ s.heading_word_3 }}</h4>
+        </div>
       </div>
 
       <div class="unherited-story-content">
@@ -86,12 +86,12 @@
     justify-content: center;
   }
 
-  #unherited-story-{{ section.id }} .unherited-story-heading {
+  #unherited-story-{{ section.id }} .unherited-story-heading h4 {
     margin: 0;
     color: var(--story-heading, #990000);
-    font-size: var(--story-heading-size-d, 66px);
+    {% comment %} font-size: var(--story-heading-size-d, 66px); {% endcomment %}
     line-height: 0.78;
-    font-weight: 400;
+    {% comment %} font-weight: 400; {% endcomment %}
     letter-spacing: -1.5px;
     font-family: Georgia, 'Times New Roman', serif;
   }
@@ -129,7 +129,24 @@
   #unherited-story-{{ section.id }} .unherited-story-text p {
     margin: 0;
   }
+ @media screen and (min-width: 768px) {
+  .unherited-story-heading h4 {
+    font-size: 60px;
+  }
+}
 
+  @media screen and (min-width: 1024px) {
+  .unherited-story-heading h4 {
+    font-size: 70px;
+  }
+}
+
+ @media screen and (min-width: 1440px) {
+  .unherited-story-heading h4 {
+    font-size: 96px;
+  }
+}
+ 
   @media screen and (max-width: 749px) {
     #unherited-story-{{ section.id }} .unherited-story-wrapper {
       padding: var(--story-padding-top-m, 14px) var(--story-padding-x-m, 18px) var(--story-padding-bottom-m, 24px);
@@ -148,7 +165,7 @@
     }
 
     #unherited-story-{{ section.id }} .unherited-story-heading {
-      font-size: var(--story-heading-size-m, 48px);
+     font-size: 60px;
       line-height: 0.78;
       text-align: center;
       letter-spacing: -1px;
