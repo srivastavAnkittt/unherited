@@ -164,7 +164,7 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#EDEBDE",
+          "background": "#edebde",
           "background_gradient": "linear-gradient(251deg, rgba(237, 235, 222, 1) 100%, rgba(237, 235, 222, 1) 100%)",
           "text": "#121212",
           "button": "#121212",
@@ -215,6 +215,17 @@
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
+        }
+      },
+      "scheme-1b04f660-ddae-452b-b3fd-f464416e1509": {
+        "settings": {
+          "background": "#edebde",
+          "background_gradient": "linear-gradient(251deg, rgba(237, 235, 222, 1) 100%, rgba(237, 235, 222, 1) 100%)",
+          "text": "#EDEBDE",
+          "button": "#EDEBDE",
+          "button_label": "#EDEBDE",
+          "secondary_button_label": "#EDEBDE",
+          "shadow": "#EDEBDE"
         }
       }
     }
