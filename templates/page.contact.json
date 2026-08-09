@@ -18,6 +18,9 @@
     },
     "form": {
       "type": "contact-form",
+      "custom_css": [
+        "_.formHeader_jnbzb_24{margin-top:85px;}"
+      ],
       "settings": {
         "heading": "",
         "heading_size": "h1",
