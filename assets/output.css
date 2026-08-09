@@ -38,6 +38,8 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
@@ -2902,6 +2904,11 @@
       font-size: 1px;
     }
   }
+  .md\:text-\[5px\] {
+    @media (width >= 48rem) {
+      font-size: 5px;
+    }
+  }
   .md\:text-\[10px\] {
     @media (width >= 48rem) {
       font-size: 10px;
@@ -2952,9 +2959,19 @@
       font-size: 30px;
     }
   }
+  .md\:text-\[36px\] {
+    @media (width >= 48rem) {
+      font-size: 36px;
+    }
+  }
   .md\:text-\[48px\] {
     @media (width >= 48rem) {
       font-size: 48px;
+    }
+  }
+  .md\:text-\[50px\] {
+    @media (width >= 48rem) {
+      font-size: 50px;
     }
   }
   .md\:text-\[60px\] {
@@ -3058,9 +3075,30 @@
       padding-right: calc(var(--spacing) * 8);
     }
   }
+  .lg\:text-2xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .lg\:\!text-\[96px\] {
+    @media (width >= 64rem) {
+      font-size: 96px !important;
+    }
+  }
   .lg\:text-\[10px\] {
     @media (width >= 64rem) {
       font-size: 10px;
+    }
+  }
+  .lg\:text-\[96px\] {
+    @media (width >= 64rem) {
+      font-size: 96px;
+    }
+  }
+  .lg\:text-\[96\] {
+    @media (width >= 64rem) {
+      color: 96;
     }
   }
   .xl\:w-\[130px\] {
@@ -3068,9 +3106,34 @@
       width: 130px;
     }
   }
+  .xl\:text-\[6px\] {
+    @media (width >= 80rem) {
+      font-size: 6px;
+    }
+  }
   .xl\:text-\[14px\] {
     @media (width >= 80rem) {
       font-size: 14px;
+    }
+  }
+  .xl\:text-\[70px\] {
+    @media (width >= 80rem) {
+      font-size: 70px;
+    }
+  }
+  .xl\:text-\[76px\] {
+    @media (width >= 80rem) {
+      font-size: 76px;
+    }
+  }
+  .xl\:text-\[96px\] {
+    @media (width >= 80rem) {
+      font-size: 96px;
+    }
+  }
+  .xl\:text-\[px\] {
+    @media (width >= 80rem) {
+      color: px;
     }
   }
   .\[\&\[open\]\]\:bg-\[\#810100\] {

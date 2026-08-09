@@ -40,8 +40,8 @@
       <div class="h-[stretch] relative w-full md:w-[32%] flex-shrink-0 text-center md:text-left order-1">
         {%- if section.settings.heading11 != blank -%}
           <div
-            class="custom-tribe font-serif leading-tight community-reviews-heading-{{ sec_id }} !leading-[.8] md:!text-[50px]"
-            style="color: var(--cr-heading-color); font-size: var(--cr-heading-size-m);"
+            class="custom-tribe  leading-tight community-reviews-heading-{{ sec_id }} !leading-[.8] text-[60px] md:text-[36px] xl:text-[70px]"
+            style="color: var(--cr-heading-color);"
           >
             {{ section.settings.heading11 }}
           </div>
@@ -112,7 +112,7 @@
 
 <style>
   .community-reviews-heading-{{ sec_id }} {
-    font-size: var(--cr-heading-size-m);
+    {% comment %} font-size: var(--cr-heading-size-m); {% endcomment %}
   }
   .community-reviews-desc-{{ sec_id }} {
     font-size: var(--cr-desc-size-m);
@@ -163,7 +163,7 @@
       padding-bottom: var(--cr-pad-bottom-d) !important;
     }
     .community-reviews-heading-{{ sec_id }} {
-      font-size: var(--cr-heading-size-d) !important;
+      {% comment %} font-size: var(--cr-heading-size-d) !important; {% endcomment %}
     }
     .community-reviews-grid-{{ sec_id }} {
       display: grid !important;
