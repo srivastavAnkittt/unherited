@@ -192,7 +192,7 @@
         "mobile_logo_position": "center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "always",
+        "sticky_header_type": "none",
         "show_line_separator": true,
         "color_scheme": "scheme-1b04f660-ddae-452b-b3fd-f464416e1509",
         "menu_color_scheme": "scheme-4",
