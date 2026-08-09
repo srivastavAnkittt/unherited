@@ -56,7 +56,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
    {% render 'custom-fonts' %}
 
-   {% if template.name == 'product' %}
+   {% unless template.name == 'index' or page.handle == 'tribe' %}
     <style>
       .header__menu-item,.header__icon,.cart-count-bubble{
       color: black !important;
@@ -65,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       background-color: rgb(202 201 195)!important;
       }
     </style>
-    {% endif %}
+    {% endunless %}
   {%- if settings.animations_reveal_on_scroll -%}
     <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
