@@ -19,7 +19,7 @@
     "form": {
       "type": "contact-form",
       "custom_css": [
-        "section._formHeader_jnbzb_24{margin-top: 85px;}"
+        "._gridItemContent_1q1d2_257 {margin-top: 85px;}"
       ],
       "settings": {
         "heading": "",
