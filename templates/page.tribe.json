@@ -282,13 +282,6 @@
     "unherited_community_xNmix8": {
       "type": "unherited-community",
       "blocks": {
-        "review_card_mCTEqY": {
-          "type": "review_card",
-          "settings": {
-            "card_image": "shopify://shop_images/Group_125.png",
-            "alt_text": "Customer review"
-          }
-        },
         "review_card_pyd9Eq": {
           "type": "review_card",
           "settings": {
@@ -296,10 +289,24 @@
             "alt_text": "Customer review"
           }
         },
+        "review_card_mCTEqY": {
+          "type": "review_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Group_125.png",
+            "alt_text": "Customer review"
+          }
+        },
         "review_card_cgRN8g": {
           "type": "review_card",
           "settings": {
             "card_image": "shopify://shop_images/Rectangle_1282.png",
+            "alt_text": "Customer review"
+          }
+        },
+        "review_card_xdfL7e": {
+          "type": "review_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Group_127.png",
             "alt_text": "Customer review"
           }
         },
@@ -313,25 +320,18 @@
         "review_card_zpBgjh": {
           "type": "review_card",
           "settings": {
-            "card_image": "shopify://shop_images/Group_125.png",
-            "alt_text": "Customer review"
-          }
-        },
-        "review_card_xdfL7e": {
-          "type": "review_card",
-          "settings": {
-            "card_image": "shopify://shop_images/Group_127.png",
+            "card_image": "shopify://shop_images/Group_126_61053b0c-cd4f-4b23-a6ba-fb14247cdc35.png",
             "alt_text": "Customer review"
           }
         }
       },
       "block_order": [
-        "review_card_mCTEqY",
         "review_card_pyd9Eq",
+        "review_card_mCTEqY",
         "review_card_cgRN8g",
+        "review_card_xdfL7e",
         "review_card_EyYcYz",
-        "review_card_zpBgjh",
-        "review_card_xdfL7e"
+        "review_card_zpBgjh"
       ],
       "name": "Community Reviews",
       "settings": {
