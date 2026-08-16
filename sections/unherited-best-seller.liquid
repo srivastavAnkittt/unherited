@@ -58,10 +58,18 @@
 
   #shopify-section-{{ section.id }} .best-seller-artist {
     {% comment %} margin-top: 12px; {% endcomment %}
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: {{ section.settings.artist_size }}px;
+    {% comment %} font-family: Georgia, 'Times New Roman', serif; {% endcomment %}
+    {% comment %} font-size: {{ section.settings.artist_size }}px; {% endcomment %}
+    {% comment %} font-family: Ethic Serif; {% endcomment %}
+    font-weight: 300;
+    {% comment %} font-style: Light Italic; {% endcomment %}
+    font-size: 96px;
+    {% comment %} leading-trim: NONE; {% endcomment %}
+    line-height: 80%;
+    letter-spacing: 0%;
     font-style: italic;
-    line-height: 1;
+    color: #810100;
+    {% comment %} line-height: 1; {% endcomment %}
   }
 
   #shopify-section-{{ section.id }} .best-seller-button {
@@ -75,6 +83,9 @@
   }
   @media screen and (max-width: 749px) {
     #shopify-section-{{ section.id }} .best-seller-title h4 {
+     font-size: 60px;
+    }
+    #shopify-section-{{ section.id }} .best-seller-artist {
      font-size: 60px;
     }
     #shopify-section-{{ section.id }} .best-seller-divider{
@@ -116,9 +127,9 @@
       class="best-seller-divider"
     ></span>
 
-    <div class="best-seller-artist">
+    <h5 class="best-seller-artist">
       {{ section.settings.artist_text }}
-    </div>
+    </h5>
 
 
 

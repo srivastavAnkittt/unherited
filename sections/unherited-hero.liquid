@@ -6,19 +6,46 @@
       --hero-height-mobile: {{ section.settings.hero_height_mobile }}px;
     }
 
+    {% comment %} #unherited-hero-{{ section.id }} .hero-wrap {
+       min-height: clamp(450px, 60vh, var(--hero-height-desktop));
+     {% comment %} min-height: var(--hero-height-desktop); {% endcomment %}
+    } {% endcomment %}
+
     #unherited-hero-{{ section.id }} .hero-wrap {
-     min-height: var(--hero-height-desktop);
-    }
+  height: var(--hero-height-desktop);
+  min-height: 0;
+}
 
     #unherited-hero-{{ section.id }} .serif-font {
       font-family: Georgia, "Times New Roman", serif;
     }
 
     @media screen and (max-width: 767px) {
-      #unherited-hero-{{ section.id }} .hero-wrap {
+      {% comment %} #unherited-hero-{{ section.id }} .hero-wrap {
         min-height: var(--hero-height-mobile);
-      }
+      } {% endcomment %}
+       #unherited-hero-{{ section.id }} .hero-wrap {
+    height: var(--hero-height-mobile);
+  }
     }
+
+
+    #unherited-hero-{{ section.id }} .hero-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: {{ section.settings.desktop_image.aspect_ratio }};
+  height: auto;
+  min-height: 0;
+}
+
+@media screen and (max-width: 767px) {
+  #unherited-hero-{{ section.id }} .hero-wrap {
+    {% if section.settings.mobile_image != blank %}
+      aspect-ratio: {{ section.settings.mobile_image.aspect_ratio }};
+    {% endif %}
+    height: auto;
+  }
+}
   </style>
 
   <div class="hero-wrap relative flex items-center justify-center text-center">
@@ -33,7 +60,7 @@
           width="{{ section.settings.desktop_image.width }}"
           height="{{ section.settings.desktop_image.height }}"
           loading="eager"
-          class="absolute inset-0 w-full h-full "
+          class="absolute inset-0 w-full h-full object-cover"
         >
       </picture>
     {% else %}

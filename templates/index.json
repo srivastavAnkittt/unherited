@@ -149,7 +149,8 @@
           "type": "collection_card",
           "settings": {
             "image": "shopify://shop_images/him.png",
-            "title": "Fragrance for Him",
+            "title": "Fragrance for",
+            "title-i": "Him",
             "button_text": "Explore",
             "link": "shopify://collections/men"
           }
@@ -158,7 +159,8 @@
           "type": "collection_card",
           "settings": {
             "image": "shopify://shop_images/her.png",
-            "title": "Fragrance for Her",
+            "title": "Fragrance for",
+            "title-i": "Her",
             "button_text": "Explore",
             "link": "shopify://collections/women"
           }
@@ -187,10 +189,10 @@
         "brand_red": "#8f0000",
         "product": "",
         "heading": "<p><em>Our</em> <strong>Best</strong></p><p><strong> Seller</strong></p><p></p><p>-</p><p><br/><em>Artist </em></p>",
-        "i-heading": "Our",
-        "b-heading": "Best Seller",
-        "a-heading": "Artist",
-        "product_title": "",
+        "small_text": "Our",
+        "bold_text": "Best",
+        "second_line": "Seller",
+        "artist_text": "Artist",
         "product_image": "shopify://shop_images/Artist_4_1_1.png",
         "meta_text": "Unisex | Amber Oud | 30% Extrait de Parfum",
         "description": "Artist crafts bold richness with a warm amber oud character. A refined signature made to stay memorable.",
@@ -228,7 +230,7 @@
         "desktop_banner": "shopify://shop_images/Group_143.png",
         "mobile_banner": "shopify://shop_images/Frame_2111.png",
         "desktop_video": "shopify://files/videos/website video.mp4",
-        "mobile_video": "shopify://files/videos/website video.mp4",
+        "mobile_video": "shopify://files/videos/1000308702-compressed.mp4",
         "heading": "<p>Unwrap<br/><em>Unherited</em></p>",
         "caption": "With Founder",
         "name": "Vishwajeet Singh"

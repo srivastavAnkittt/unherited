@@ -203,7 +203,7 @@
         "brand_red": "#8f0000",
         "desktop_image": "shopify://shop_images/Tribe_banner.png",
         "mobile_image": "shopify://shop_images/Slide_16_9_-_21.png",
-        "hero_height_desktop": 700,
+        "hero_height_desktop": 560,
         "hero_height_mobile": 560,
         "heading": "",
         "subheading": "",
