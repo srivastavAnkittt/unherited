@@ -43,7 +43,9 @@
             class="custom-tribe  leading-tight community-reviews-heading-{{ sec_id }} !leading-[.8] text-[60px] md:text-[36px] xl:text-[70px]"
             style="color: var(--cr-heading-color);"
           >
-            {{ section.settings.heading11 }}
+            <h4 class="!leading-[.8] !text-[60px] md:!text-[36px] xl:!text-[70px] !font-[300]" style="color: var(--cr-heading-color);"><i>{{ section.settings.heading11 }}</i></h4>
+            <h4 class="!leading-[.8] !text-[60px] md:!text-[36px] xl:!text-[70px] !font-[700]" style="color: var(--cr-heading-color);">{{ section.settings.heading12 }}</h4>
+            <h4 class="!leading-[.8] !text-[60px] md:!text-[36px] xl:!text-[70px] !font-[300]" style="color: var(--cr-heading-color);"><i>{{ section.settings.heading13 }}</i></h4>
           </div>
         {%- endif -%}
 
@@ -197,7 +199,9 @@
     { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 100, "step": 5, "unit": "px", "label": "Padding Bottom (Mobile)", "default": 30 },
 
     { "type": "header", "content": "Heading" },
-    { "type": "richtext", "id": "heading11", "label": "Heading Text aaaa" },
+    { "type": "text", "id": "heading11", "label": "Heading Text Italic" },
+    { "type": "text", "id": "heading12", "label": "Heading Text" },
+    { "type": "text", "id": "heading13", "label": "Heading Text Italic" },
     { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#7A1F1F" },
     { "type": "range", "id": "heading_size_desktop", "min": 20, "max": 120, "step": 1, "unit": "px", "label": "Heading Font Size (Desktop)", "default": 48 },
     { "type": "range", "id": "heading_size_mobile", "min": 16, "max": 80, "step": 1, "unit": "px", "label": "Heading Font Size (Mobile)", "default": 28 },

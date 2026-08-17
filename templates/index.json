@@ -231,7 +231,8 @@
         "mobile_banner": "shopify://shop_images/Frame_2111.png",
         "desktop_video": "shopify://files/videos/website video.mp4",
         "mobile_video": "shopify://files/videos/1000308702-compressed.mp4",
-        "heading": "<p>Unwrap<br/><em>Unherited</em></p>",
+        "heading": "Unwrap",
+        "heading-1": "Unherited",
         "caption": "With Founder",
         "name": "Vishwajeet Singh"
       }

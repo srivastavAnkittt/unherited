@@ -141,16 +141,23 @@
       font-weight: 400;
     }
 
-    #unherited-founder-video-{{ section.id }} .desktop-heading .founder-title {
-      font-size: 48px;
-      line-height: 42px;
+    #unherited-founder-video-{{ section.id }} .desktop-heading .founder-title h4 {
+      font-size: 96px;
+      line-height: 1;
       display: block;
+      color: #EDEBDE;
+    }
+    #unherited-founder-video-{{ section.id }} .desktop-heading .founder-title h4 i {
+      font-weight: 300;
     }
 
-    #unherited-founder-video-{{ section.id }} .mobile-text .founder-title {
+
+
+    #unherited-founder-video-{{ section.id }} .mobile-text .founder-title, .mobile-text .founder-title h4 {
       font-size: 33px;
       line-height: 51px;
       display: block;
+      color: #EDEBDE;
     }
 
     #unherited-founder-video-{{ section.id }} .caption {
@@ -250,9 +257,12 @@
 
       <div class="desktop-only desktop-heading">
         {% if section.settings.heading != blank %}
-          <span class="founder-title serif-font !text-[60px] md:!text-[96px] !leading-1 md:!leading-[1]">
+          <div class="founder-title serif-font !text-[60px] md:!text-[96px] !leading-1 md:!leading-[1]">
             {{ section.settings.heading }}
-          </span>
+          </div>
+          <div class="founder-title !text-[60px] md:!text-[96px] !leading-1 md:!leading-[1]">
+            <h4><i>{{ section.settings.heading-1 }}</i></h4>
+          </div>
         {% endif %}
       </div>
 
@@ -268,9 +278,12 @@
 
       <div class="mobile-only mobile-text">
         {% if section.settings.heading != blank %}
-          <span class="founder-title serif-font !text-[60px]">
-            {{ section.settings.heading }}
-          </span>
+          <div class="founder-title serif-font !text-[60px]">
+            {{ section.settings.heading }} 
+          </div>
+          <div class="founder-title serif-font">
+              <h4 class="!text-[60px]"><i>{{ section.settings.heading-1 }}</i></h4>
+            </div>
         {% endif %}
 
         <div class="mobile-name-wrap">
@@ -416,10 +429,16 @@
       "label": "Mobile video"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "<p>Unwrap<br><em>Unherited</em></p>"
+      "default": "Unwrap"
+    },
+    {
+      "type": "text",
+      "id": "heading-1",
+      "label": "Italic Heading",
+      "default": "Unherited"
     },
     {
       "type": "text",
