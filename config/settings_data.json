@@ -25,7 +25,8 @@
     "animations_reveal_on_scroll": false,
     "animations_hover_elements": "none",
     "buttons_border_thickness": 0,
-    "body_text": "#1fa0a0",
+    "body_text": "#810100",
+    "button-text": "#EDEBDE",
     "buttons_border_opacity": 25,
     "buttons_radius": 8,
     "buttons_shadow_opacity": 0,
@@ -221,22 +222,22 @@
         "settings": {
           "background": "#edebde",
           "background_gradient": "linear-gradient(251deg, rgba(237, 235, 222, 1) 100%, rgba(237, 235, 222, 1) 100%)",
-          "text": "#EDEBDE",
-          "button": "#EDEBDE",
-          "button_label": "#EDEBDE",
-          "secondary_button_label": "#EDEBDE",
-          "shadow": "#EDEBDE"
+          "text": "#edebde",
+          "button": "#edebde",
+          "button_label": "#edebde",
+          "secondary_button_label": "#edebde",
+          "shadow": "#edebde"
         }
       },
       "scheme-c4f4f182-31e1-4ec9-b54a-9c25c689c6a3": {
         "settings": {
           "background": "#810100",
           "background_gradient": "linear-gradient(251deg, rgba(129, 1, 0, 1) 100%, rgba(237, 235, 222, 1) 100%)",
-          "text": "#EDEBDE",
-          "button": "#EDEBDE",
-          "button_label": "#EDEBDE",
-          "secondary_button_label": "#EDEBDE",
-          "shadow": "#EDEBDE"
+          "text": "#edebde",
+          "button": "#edebde",
+          "button_label": "#edebde",
+          "secondary_button_label": "#edebde",
+          "shadow": "#edebde"
         }
       }
     }
