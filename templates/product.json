@@ -57,6 +57,7 @@
         },
         "offers_pWbCwC": {
           "type": "offers",
+          "disabled": true,
           "settings": {
             "offer_text": "<p><strong>LIMITED TIME OFFERS</strong><br/></p><ul><li>Buy 1 for <strong>₹999</strong></li><li>Buy 2 for <strong>₹1,899 </strong></li><li>Buy 3 for <strong>₹2,699 </strong></li><li>Buy 4 for <strong>₹3,399</strong></li><li>Buy 5 for <strong>₹3,999</strong></li></ul>"
           }
