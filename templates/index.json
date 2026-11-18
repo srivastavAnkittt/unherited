@@ -110,12 +110,34 @@
         "announcement_Gfh7iD": {
           "type": "announcement",
           "settings": {
-            "richtext": "30% Essential Oil Concentration Extrait De Parfum",
+            "richtext": "Buy 1 For 600",
+            "link": ""
+          }
+        },
+        "announcement_ipTife": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 2 For 1000",
+            "link": ""
+          }
+        },
+        "announcement_JN4btW": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 3 For 1400",
+            "link": ""
+          }
+        },
+        "announcement_F6tzw4": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Buy 4 For 1700",
             "link": ""
           }
         },
         "announcement_afMYAn": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "richtext": "Free shipping",
             "link": ""
@@ -123,6 +145,7 @@
         },
         "announcement_wAMdN4": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "richtext": "IFRA compliant Skin Safe Ingredients",
             "link": ""
@@ -131,6 +154,9 @@
       },
       "block_order": [
         "announcement_Gfh7iD",
+        "announcement_ipTife",
+        "announcement_JN4btW",
+        "announcement_F6tzw4",
         "announcement_afMYAn",
         "announcement_wAMdN4"
       ],
