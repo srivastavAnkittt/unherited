@@ -110,21 +110,21 @@
         "announcement_Gfh7iD": {
           "type": "announcement",
           "settings": {
-            "richtext": "Buy 1 For 600",
+            "richtext": "Buy 1 For 600 |",
             "link": ""
           }
         },
         "announcement_ipTife": {
           "type": "announcement",
           "settings": {
-            "richtext": "Buy 2 For 1000",
+            "richtext": "Buy 2 For 1000 |",
             "link": ""
           }
         },
         "announcement_JN4btW": {
           "type": "announcement",
           "settings": {
-            "richtext": "Buy 3 For 1400",
+            "richtext": "Buy 3 For 1400 |",
             "link": ""
           }
         },
