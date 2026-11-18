@@ -107,6 +107,13 @@
     "marque_slider_y7RJLf": {
       "type": "marque-slider",
       "blocks": {
+        "announcement_4yDKKF": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "Grand Liquidation Steal Deal |",
+            "link": ""
+          }
+        },
         "announcement_Gfh7iD": {
           "type": "announcement",
           "settings": {
@@ -153,6 +160,7 @@
         }
       },
       "block_order": [
+        "announcement_4yDKKF",
         "announcement_Gfh7iD",
         "announcement_ipTife",
         "announcement_JN4btW",
